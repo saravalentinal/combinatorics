@@ -1,0 +1,59 @@
+
+{ 
+    "questions" : {
+                    "title":"Entendiendo cómo funciona la Combinatoria",
+                    "first": "¿Qué es la Combinatoria?",
+                    "second": "Conceptos importantes en la Combinatoria",
+                    "third": "¿Cómo sé qué método debo usar?",
+                    "forth": "¿Cómo sé si importa el orden?",
+                    "fifth": "Repetición"
+    },
+  
+    "answers": {
+                "first": "Es una rama de las matemáticas que estudia los diferentes <strong> métodos </strong> para <strong> contar </strong> las distintas <strong> agrupaciones </strong> o formas de <strong> ordenar </strong> un determinado número de elementos.",
+                "example_title": "Ejemplo:",
+                "example_explanation": "Supongamos que tenemos 3 manzanas de diferentes colores y alguien nos pide que las ordenemos.",
+                "first_order": "Esta podría ser una forma de ordenarlas:",
+                "second_order": "Pero si quisiera, podría hacerlo de la siguiente manera:",
+                "third_order": "Y si las ordenara de todas las formas posibles, tendría algo como esto:",
+                "sum_up": "¿Cuántas formas de ordenar hubo? En este caso hubo <strong> 6 formas diferentes.</strong>",
+                "conclusion": "Esto es lo que se busca en los ejercicios de combinatoria, <strong>saber de cuántas maneras distintas se puede organizar cierto grupo de elementos.</strong>",
+                "n_number": "<strong>Población (n) :</strong> es el número de elementos que se están estudiando.",
+                "r_number":  "<strong>Muestra (r) :</strong> de esos elementos de la población, cuantos elementos se seleccionan para ordenar.",
+                "second_example": "Siguiendo con nuestro ejemplo, en este caso la población (n) sería <strong>3</strong>, porque es el <strong>número total</strong> de manzanas <strong>distintas</strong> del que disponemos. Por otro lado, el número de la muestra (r) <strong>también sería 3</strong>, ya que para formar las distintas combinaciones, estamos utilizando <strong>todos los tipos</strong> de manzanas disponibles.",
+                "what_method": "<strong>¿Importa el orden de mis elementos? ¿Usaré todos los elementos?</strong> Hacerse estas preguntas es importante y nos ayudará a definir que método deberemos usar.",
+                "method_combination": "<strong>Combinación: </strong>no importa el orden de los elementos.",
+                "method_permutation": "<strong>Permutación: </strong>sí importa el orden y se trabaja con todos los elementos",
+                "method_variation": "<strong>Variación: </strong>sí importa el orden pero no se trabaja con todos los elementos.",
+                "use_permutation": "En nuestro ejemplo de las manzanas usaremos la <strong>Permutación</strong>, ya que <strong>nos importa</strong> el orden y trabajamos con <strong>todos los elementos.</strong>",
+                "order": "Para responder esta pregunta podemos ayudarnos de los siguientes pasos:",
+                "step_one": "1_ Hacer 2 combinaciones diferentes con los mismos elementos.",
+                "step_two": "2_ Preguntarse: ¿Son diferentes?",
+                "step_one_example": "1_",
+                "order_example": "2_ En este caso son diferentes porque lo que estamos evaluando es el orden de los colores aunque sean siempre los mismos 3. Por lo tanto, sí importa el orden.",
+                "repetition_concept": "Los métodos con repetición de un conjunto son las distintas formas en que se puede hacer una selección de elementos de un conjunto dado, permitiendo que las <strong>selecciones</strong> puedan <strong>repetirse.</strong>",
+                "repetition_example": "Una vez que hemos decidido si usaremos combinación, permutación o variación, debemos preguntarnos si nuestros elementos pueden o no repetirse. En nuestro ejemplo de las manzanas, podríamos suponer que sólo disponemos de un ejemplar de cada uno y nos es imposible aumentar la cantidad. Entonces <strong>no se pueden repetir</strong> nuestros elementos."
+    },
+  
+    "footer": {
+                "made": "Creado por ",
+                "and": "y",
+                "rights": "@Combinados 2022. Todos los derechos reservados."
+    },
+  
+    "options": {
+                "one": "Combinación ",
+                "two": "Permutación",
+                "three": "Variación ",
+                "choose": "¿No sabes cuál es la opción correcta para tí?"
+      },
+  
+    "calc": {
+              "totalNumber": "Número Total (n)",
+              "groupNumber": "Número del Grupo (r)",
+              "button": "CALCULAR",
+              "result": "Resultado:" 
+    },
+    "language": "Idioma"
+}
+

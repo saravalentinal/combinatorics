@@ -1,0 +1,421 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    button {
+        @apply text-white border bg-indigo-600 border-indigo-600
+        hover:bg-transparent hover:text-indigo-600 rounded-md
+    }
+} */
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+/* DARK/LIGHT MODE*/
+
+#light{
+    background-color: #eceff1;
+}
+
+#dark{
+    background-color: #121212;
+}
+
+#dark .logo{
+    color: #fff;
+}
+
+#dark .options button{
+    color: #fff;
+}
+
+#dark .numbers h2{
+    color: #fff
+}
+
+#dark .calculate-button button{
+    background-color: #fff;
+    color: #121212;
+}
+
+#dark .dont-know h3{
+    color: #fff;
+}
+
+#dark .calc-box{
+    box-shadow: 0px 0px 12px #808080;
+}
+
+#dark .settings button{
+    color: #eceff1;
+}
+
+/* NAVBAR */
+.settings{
+    display: flex;
+}
+
+.flag-span{
+    padding: 0 5px 0 10px;
+}
+
+/* MAIN */
+
+.main-app{
+    min-height: 100vh;
+    transition: all .4s; 
+}
+
+.main-div{
+    width: 95%;
+    max-width: 650px;
+    margin: 0 auto;   
+}
+
+
+.nav-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: solid 1px hsla(201, 12%, 42%, 0.384);
+}
+
+.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    margin:0;
+    padding:0;
+    color:hsl(202, 84%, 10%);
+}
+
+
+.settings button{
+    padding: 8px;
+    font-size: 20px;
+    color:hsl(202, 84%, 10%);
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+}
+
+.settings button:first-child{
+    margin-right: 10px;
+}
+
+
+.options{
+    padding: 0 0 15px 0;
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content:space-between;
+}
+
+.options div button{
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 90%;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(202, 84%, 10%);
+    font-weight: 600;
+}
+
+#trueCalcButton{
+    animation: moveDown ease-in-out 0.2s;
+    animation-fill-mode: both;
+}
+
+#true{
+    background-color: white;
+    color: black;
+}
+
+#li-options{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#li-options a{
+    color: hsl(202, 84%, 10%);
+    text-decoration: none;
+}
+
+/* Main Calc */
+
+.main-calc{
+    margin: 30px auto 0 auto;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.numbers{
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: hsl(202, 84%, 10%);
+    margin: 0 auto;
+}
+
+.numbers div:last-child{
+    margin-top: 30px;
+}
+
+.numbers div input{
+    padding: 8px;
+    width: 95%;
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+    border:none;
+} 
+
+.calculate-button{
+    text-align: center;
+}
+
+.calculate-button button{
+    position:relative;
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 40px 0 0 0;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    box-shadow: hsla(226, 84%, 10%, 0.152) 0px 6px 0px;
+}
+
+.result{
+    margin: 0 auto;
+    padding: 10px 0 100px 15px;
+    background-color: rgb(255, 255, 255);
+    max-width: 500px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.div-result{
+    padding: 20px 0;
+}
+
+.calc-box{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 80px 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 12px transparent;
+    border-radius: 8px;
+}
+
+
+.dont-know{
+    font-size: 16px;
+    padding: 20px 0 50px 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration:underline;
+    text-align: center;
+    color:hsl(202, 84%, 15%);
+}
+
+.numbers h2{
+    font-size: 17px;
+}
+
+.divisory_line{
+    border-top: hsla(202, 84%, 15%, 0.414) 0.1px solid;
+    width: 240px;
+    margin: 0 auto;
+}
+
+
+/* Section Q&A */
+
+.title-questions{
+    font-size: 1.9em;
+    font-weight: 600;
+    margin:0;
+    padding-top: 70px;
+    color:hsl(202, 84%, 15%);
+}
+
+.questions-section{
+    font-family: 'Montserrat', sans-serif;
+    width: 95%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.question-block{
+    padding: 30px 0 0 0;
+}
+
+.question{
+    font-size: 1.4em;
+    font-weight: 600;
+    color:hsl(202, 84%, 15%);
+}
+
+.question::after{
+    content: '';
+    display: block;
+    width: 24px;
+    padding-top: 8px;
+    border-bottom: 4px solid rgb(26, 147, 218);
+    opacity: 0.6;
+}
+
+.answer, .answer_explanation{
+    font-size: 17px;
+    font-weight: 400;
+    padding: 0;
+    margin: 40px 0;
+    color:hsl(202, 12%, 42%)
+}
+
+.answer_explanation::before{
+    content: '';
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: solid 4px rgb(26, 147, 218);
+    opacity: 0.6;
+}
+
+.seis-formas{
+    font-size: 100spx;
+    color: pink;
+}
+
+.firstApple{
+    color:#121212;
+    margin: 0 15px;
+}
+
+.secondApple{
+    color: #607D8B;
+    margin: 0 15px;
+}
+
+.thirdApple{
+    color:#CFD8DC;
+    margin: 0 15px;
+}
+
+.div-apples{
+    font-size: 60px;
+    text-align: center;
+}
+
+.div-apples ul, .div-apples ul li{
+    margin:0;
+    padding:0;
+}
+
+.list-apples-div ul{
+    list-style: none;
+}
+
+.first-second-apple{
+    display: grid;
+    grid-template-columns: 10% 30% 30% 30%;
+    max-width:350px;
+    margin: 0 auto;
+}
+
+.list-numbers{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Section Footer */
+
+.footer-box{
+    margin-top: 5
+    0px;
+}
+
+.div-footer-box{
+    text-align: center;
+    border-top: solid 1px hsla(201, 12%, 42%, 0.384);
+    margin-top: 30px;
+    padding: 20px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-github{
+    font-size: 2.7em;
+    color: black;
+}
+
+
+.all-rights{
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 12px;
+    color:hsl(202, 12%, 32%)
+}
+
+.made-by{
+    margin: 20px 0;
+    font-size: 15px;
+    color:hsl(202, 84%, 15%);
+}
+
+.alejandro, .valentina{
+    color: rgb(26, 147, 218);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ANIMATIONS */
+
+@keyframes moveDown {
+    0% { }
+    50% { transform:translateY(5px); box-shadow:rgba(255, 255, 255, 0.5) 0px 6px 0px}
+    100% { }
+}
+
+
+/* Responsive Design */
+
+@media (min-width: 500px){
+
+    /*Main Calc*/
+    .numbers{
+        grid-template-columns: 48% 48%;
+        justify-content: space-between;
+    }
+    
+    .numbers div:last-child{
+        margin-top: 0;
+    }
+
+}
+
+@media (min-width: 600px){
+
+    /* Apples */
+    .list-apples-div{
+        display: flex;
+    }
+}
