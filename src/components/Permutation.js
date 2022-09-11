@@ -13,7 +13,6 @@ export default function Permutation()
   const submitHandler = e =>{
     e.preventDefault();
     const totalNumber = parseInt(e.target.total.value,10);
-    const groupNumber = parseInt(e.target.total2.value, 10);
     
     function recursiveFactorial(numberToFactorial){
       if (numberToFactorial === 0)
@@ -25,14 +24,13 @@ export default function Permutation()
     }
 
     function permutationFormula(){
-      const result = recursiveFactorial(totalNumber) / recursiveFactorial(totalNumber - groupNumber);
+      const result = recursiveFactorial(totalNumber);
       return result
     }
 
     setResult(permutationFormula());
 
     e.target.total.value = '';
-    e.target.total2.value = '';
   }
   
   return (
@@ -40,16 +38,11 @@ export default function Permutation()
     <div className='calc-box'>
       <form onSubmit={submitHandler}>
   
-        <div className='numbers'>
+        <div className='numbersPermutation'>
   
           <div>
             <h2>{t('calc.totalNumber')}</h2>
             <input type='number' name='total'></input>
-          </div>
-  
-          <div>
-            <h2>{t('calc.groupNumber')}</h2>
-            <input type='number' name='total2'></input>
           </div>
   
         </div>

@@ -3,9 +3,9 @@ import React from 'react'
 export default function Apples(props) {
   return (
         <div className='div-apples'>
-            <span className={props.color1}><i className="fa-solid fa-apple-whole"></i></span>
-            <span className={props.color2}><i className="fa-solid fa-apple-whole"></i></span>
-            <span className={props.color3}><i className="fa-solid fa-apple-whole"></i></span>
+            <span class={props.firstColor}><i class={props.firstObject}></i></span>
+            <span class={props.secondColor}><i class={props.secondObject}></i></span>
+            <span class={props.thirdColor}><i class={props.thirdObject}></i></span>
         </div>
   );
 }

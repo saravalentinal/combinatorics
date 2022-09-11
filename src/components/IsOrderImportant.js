@@ -10,15 +10,23 @@ export default function IsOrderImportant(props) {
             <p className='answer'>{props.step_two}</p>
             <p className='answer_explanation'>{props.step_one_example}
             <Apples
-                    color1 = "firstApple"
-                    color2 = "secondApple"
-                    color3 = "thirdApple"
+                    firstObject = "fa-solid fa-pencil"
+                    secondObject = "fa-solid fa-calculator"
+                    thirdObject = "fa-sharp fa-solid fa-clock"
+
+                    firstColor = "firstApple"
+                    secondColor = "secondApple"
+                    thirdColor = "thirdApple"
             ></Apples>
             <p className='divisory_line'></p>
             <Apples
-                    color1 = "thirdApple"
-                    color2 = "firstApple"
-                    color3 = "secondApple"
+                    firstObject = "fa-sharp fa-solid fa-clock"
+                    secondObject = "fa-solid fa-calculator"
+                    thirdObject = "fa-solid fa-pencil"
+
+                    firstColor = "thirdApple"
+                    secondColor = "secondApple"
+                    thirdColor = "firstApple"
             ></Apples>
             </p>
 

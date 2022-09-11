@@ -10,21 +10,21 @@ export default function FirstApple(props) {
                     </ul>
 
                     <ul>
-                        <li><span className={props.color1}><i className="fa-solid fa-apple-whole"></i></span></li>
-                        <li><span className={props.color2}><i className="fa-solid fa-apple-whole"></i></span></li>
-                        <li><span className={props.color2}><i className="fa-solid fa-apple-whole"></i></span></li>
+                        <li><span className={props.color1}><i class="fa-solid fa-pencil"></i></span></li>
+                        <li><span className={props.color2}><i class="fa-solid fa-calculator"></i></span></li>
+                        <li><span className={props.color2}><i class="fa-solid fa-calculator"></i></span></li>
                     </ul>
 
                     <ul>
-                        <li><span className={props.color2}><i className="fa-solid fa-apple-whole"></i></span></li>
-                        <li><span className={props.color1}><i className="fa-solid fa-apple-whole"></i></span></li>
-                        <li><span className={props.color3}><i className="fa-solid fa-apple-whole"></i></span></li>
+                        <li><span className={props.color2}><i class="fa-solid fa-calculator"></i></span></li>
+                        <li><span className={props.color1}><i class="fa-solid fa-pencil"></i></span></li>
+                        <li><span className={props.color3}><i className="fa-sharp fa-solid fa-clock"></i></span></li>
                     </ul>
 
                     <ul>
-                        <li><span className={props.color3}><i className="fa-solid fa-apple-whole"></i></span></li>
-                        <li><span className={props.color3}><i className="fa-solid fa-apple-whole"></i></span></li>
-                        <li><span className={props.color1}><i className="fa-solid fa-apple-whole"></i></span></li>
+                        <li><span className={props.color3}><i class="fa-sharp fa-solid fa-clock"></i></span></li>
+                        <li><span className={props.color3}><i className="fa-sharp fa-solid fa-clock"></i></span></li>
+                        <li><span className={props.color1}><i class="fa-solid fa-pencil"></i></span></li>
                     </ul>
 
                 </div>

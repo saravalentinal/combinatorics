@@ -10,11 +10,16 @@ export default function ApplesList(props) {
                 <FirstApple
                                 color1 = "firstApple"
                                 color2 = "secondApple"
-                                color3 = "thirdApple"></FirstApple>
+                                color3 = "thirdApple">
+
+                </FirstApple>
+
                 <SecondApple
                                 color1 = "firstApple"
                                 color2 = "secondApple"
-                                color3 = "thirdApple"></SecondApple>
+                                color3 = "thirdApple">
+
+                </SecondApple>
             </div>
 
     </div>

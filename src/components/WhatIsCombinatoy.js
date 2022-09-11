@@ -18,17 +18,25 @@ export default function WhatIsCombinatory(props) {
             <p className='answer'> {props.first_order} </p>
 
             <Apples
-                    color1 = "firstApple"
-                    color2 = "secondApple"
-                    color3 = "thirdApple"
+                    firstObject = "fa-solid fa-pencil"
+                    secondObject = "fa-solid fa-calculator"
+                    thirdObject = "fa-sharp fa-solid fa-clock"
+
+                    firstColor = "firstApple"
+                    secondColor = "secondApple"
+                    thirdColor = "thirdApple"
             ></Apples>
 
             <p className='answer'> {props.second_order} </p>
 
             <Apples
-                    color1 = "thirdApple"
-                    color2 = "secondApple"
-                    color3 = "firstApple"
+                    firstObject = "fa-sharp fa-solid fa-clock"
+                    secondObject = "fa-solid fa-calculator"
+                    thirdObject = "fa-solid fa-pencil"
+
+                    firstColor = "thirdApple"
+                    secondColor = "secondApple"
+                    thirdColor = "firstApple"
             ></Apples>
 
             <p className='answer'> {props.third_order} </p>
