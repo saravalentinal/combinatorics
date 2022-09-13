@@ -1,5 +1,6 @@
 import Main from './components/Main'
 import './index.css'
+import './styles.scss'
 import Questions from './components/Questions'
 import Footer from './components/Footer'
 import { createContext, useState} from 'react'
@@ -84,7 +85,6 @@ function App() {
     
     <section className='questions-section'>
           <h1 className='title-questions' id="question-title">{t('questions.title')}</h1>
-
           <Questions></Questions>
       </section>
 

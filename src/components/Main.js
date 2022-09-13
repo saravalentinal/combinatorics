@@ -6,6 +6,7 @@ import CombinationWithoutRepetition from './CombinationWithoutRepetition'
 import Permutation from './Permutation'
 import VariationWithoutRepetition from './VariationWithoutRepetition'
 import VariationWithRepetition from './VariationWithRepetition'
+import MethodCalculator from './MethodCalculator'
 import Options from './Options'
 import {Routes, Route} from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
@@ -25,9 +26,10 @@ export default function Main() {
           <Route path='/permutation' exact element={<Permutation/>}/>
           <Route path='/variationWithoutRepetition' exact element={<VariationWithoutRepetition/>}/>
           <Route path='/variationWithRepetition' exact element={<VariationWithRepetition/>}/>
+          <Route path='/' exact element={<MethodCalculator/>}/>
         </Routes>
       </div>
-      <a href="#question-title" className='dont-know'><h3 className='dont-know'>{t('options.choose')}</h3></a>
+      {/* <a href="#question-title" className='dont-know'><h3 className='dont-know'>{t('options.choose')}</h3></a> */}
     </>
   )
 }

@@ -43,14 +43,6 @@ export default function Questions(props) {
 
       <Examples
                 title = {t('examples.main_title')}
-                comb_without_rep_title = {t('comb_without_rep_title')}
-                comb_without_rep_ex = {t('comb_without_rep_ex')}
-                is_order_important = {t('is_order_important')}
-                can_we_repeat = {t('can_we_repeat')}
-                comb_without_rep_rep = {t('comb_without_rep_rep')}
-                comb_without_rep_order = {t('comb_without_rep_order')}
-                how_many_elements = {t('how_many_elements')}
-                comb_without_rep_how_many = {t('comb_without_rep_how_many')}
       ></Examples>
 
 

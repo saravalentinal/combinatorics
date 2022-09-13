@@ -150,6 +150,24 @@
     text-decoration: none;
 }
 
+.method-div{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 0 15px 0;
+}
+
+.method-div button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 90%;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(202, 84%, 10%);
+    font-weight: 600;
+}
+
 /* Main Calc */
 
 .main-calc{
@@ -215,7 +233,7 @@
     padding: 20px 0;
 }
 
-.calc-box{
+.calc-box, .calc-box-method{
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     padding: 80px 40px;
@@ -224,7 +242,6 @@
     box-shadow: 0px 0px 12px transparent;
     border-radius: 8px;
 }
-
 
 .dont-know{
     font-size: 16px;
@@ -243,6 +260,70 @@
     border-top: hsla(202, 84%, 15%, 0.414) 0.1px solid;
     width: 240px;
     margin: 0 auto;
+}
+
+.method-main{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.method-main div input{
+    padding: 8px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.method-main div h2{
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(202, 84%, 10%);
+    margin: 0;
+    padding: 0;
+}
+
+.calc-box-method{
+    padding: 40px;
+}
+
+.toggle-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items:flex-start;
+}
+
+.toggle-div input{
+    max-height: 100px;
+}
+
+.toggle-div button{
+    padding: 8px;
+    border:none;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.div-result-method{
+    max-width: 75%;
+    border-top: solid 1px hsla(201, 12%, 42%, 0.384);
+    margin: 25px auto 0 auto;
+}
+
+.div-result-method h2{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 15px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(202, 84%, 10%);
+
 }
 
 
@@ -371,6 +452,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+#accordionPanelsStayOpenExample{
+    padding: 40px 0;
 }
 
 /* Section Footer */

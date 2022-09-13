@@ -13,11 +13,13 @@
     "i18next-http-backend": "^1.4.1",
     "js-cookie": "^3.0.1",
     "react": "^18.2.0",
+    "react-devtools": "^4.25.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^11.18.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-switch": "^7.0.0",
+    "sass": "^1.54.9",
     "use-local-storage": "^2.3.6",
     "web-vitals": "^2.1.4"
   },

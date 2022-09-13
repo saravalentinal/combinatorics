@@ -11,30 +11,45 @@ export default function Options() {
   const [active, setActive] = useState(false);
   const [active2, setActive2] = useState(false);
   const [active3, setActive3] = useState(false);
+  const [active4, setActive4] = useState(true);
 
   const handleCombination = () => {
     setActive(true);
     setActive2(false);
     setActive3(false);
+    setActive4(false);
   };
 
   const handlePermutation = () => {
     setActive(false);
     setActive2(true);
     setActive3(false);
+    setActive4(false);
   };
 
   const handleVariation = () => {
     setActive(false);
     setActive2(false);
     setActive3(true);
+    setActive4(false);
+  };
+
+  const handleMethodCalculator = () => {
+    setActive(false);
+    setActive2(false);
+    setActive3(false);
+    setActive4(true);
   };
 
 
   return (
     <>
-    <div className="options">
 
+    <div className = "method-div">
+       <NavLink to='/' exact><button id={active4.toString()} onClick={handleMethodCalculator}>{t('options.four')}</button></NavLink>
+    </div>
+
+    <div className="options">
 
       <div class="dropdown">
 
@@ -48,11 +63,6 @@ export default function Options() {
         </ul>
 
       </div>
-
-
-{/*       <div>
-        <NavLink to='/combination' exact><button id={active.toString()} onClick={handleCombination}>{t('options.one')}</button></NavLink>
-      </div> */}
   
 
       <div>
@@ -72,10 +82,6 @@ export default function Options() {
         </ul>
 
       </div>
-
-{/*       <div>
-        <NavLink to='variation' exact><button id={active3.toString()} onClick={handleVariation}>{t('options.three')}</button></NavLink>
-      </div> */}
         
     </div>
     </>

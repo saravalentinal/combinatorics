@@ -10,23 +10,17 @@ export default function Examples(props) {
         <div className="question-block">
             <h2 className='question'> {props.title} </h2>
 
-
-
-
-
-
-
-
             <div class="accordion" id="accordionPanelsStayOpenExample">
+                
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
                     <Trans i18nKey="comb_without_rep_title">
                         <p className='example_title'>{t('examples.comb_without_rep_title')}</p>
                     </Trans>
                     </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                     <div class="accordion-body">
                     <Trans i18nKey="comb_without_rep_ex">
                         <p className='answer_example'>{t('examples.comb_without_rep_ex')}</p>
@@ -58,6 +52,8 @@ export default function Examples(props) {
                     </div>
                     </div>
                 </div>
+
+
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
@@ -98,6 +94,8 @@ export default function Examples(props) {
                     </div>
                     </div>
                 </div>
+
+
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
@@ -138,6 +136,8 @@ export default function Examples(props) {
                     </div>
                     </div>
                 </div>
+
+
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
@@ -178,6 +178,8 @@ export default function Examples(props) {
                     </div>
                     </div>
                 </div>
+
+
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
@@ -219,7 +221,6 @@ export default function Examples(props) {
                     </div>
                 </div>
                 </div>
-
         </div>
     </>
   );

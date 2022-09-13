@@ -81,14 +81,19 @@
                 "one": "Combinación ",
                 "two": "Permutación",
                 "three": "Variación ",
-                "choose": "¿No sabes cuál es la opción correcta para tí?"
+                "choose": "¿No sabes cuál es la opción correcta para tí?",
+                "four": "Calculadora de método"
       },
   
     "calc": {
               "totalNumber": "Número Total (n)",
               "groupNumber": "Número del Grupo (r)",
               "button": "CALCULAR",
-              "result": "Resultado:" 
+              "result": "Resultado:",
+              "types": "¿Cuántos elementos diferentes tienes para elegir?",
+              "numberChosen": "¿Cuántos elementos has elegido?",
+              "order": "¿Importa el orden?",
+              "rep": "¿Se puede repetir?"
     },
     "language": "Idioma"
 }
