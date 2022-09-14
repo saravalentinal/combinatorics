@@ -52,8 +52,8 @@ export default function Permutation()
       </form>
     </div>
   
-    <div className='div-result'>
-          <h2 className='result'>{t('calc.result')} {result}</h2>
+    <div className='div-result-method'>
+          <h2>{t('calc.result')} {result} </h2>
     </div>
     
     </>

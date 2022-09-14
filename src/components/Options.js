@@ -45,10 +45,6 @@ export default function Options() {
   return (
     <>
 
-    <div className = "method-div">
-       <NavLink to='/' exact><button id={active4.toString()} onClick={handleMethodCalculator}>{t('options.four')}</button></NavLink>
-    </div>
-
     <div className="options">
 
       <div class="dropdown">
@@ -84,6 +80,11 @@ export default function Options() {
       </div>
         
     </div>
+
+    <div className = "method-div">
+       <NavLink to='/' exact><button id={active4.toString()} onClick={handleMethodCalculator}>{t('options.four')}</button></NavLink>
+    </div>
+    
     </>
   )
 }

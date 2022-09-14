@@ -47,7 +47,7 @@ function App() {
 
     <div className = 'main-div'>
       <div className='nav-div'>
-        <h1 className='logo'>Combinados</h1>
+        <h1 className='logo'><span>Combina</span><span className='dos'>2</span></h1>
 
         <div className='settings'>
         <button><i onClick={toggleTheme} className="fa-solid fa-circle-half-stroke"></i></button>

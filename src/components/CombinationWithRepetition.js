@@ -39,6 +39,8 @@ export default function CombinationWithRepetition() {
     <>
     <div className='calc-box'>
 
+      <p className='title-method'>{t('examples.comb_with_rep_title')}</p>
+
       <form onSubmit={submitHandler}>
   
         <div className='numbers'>
@@ -60,8 +62,8 @@ export default function CombinationWithRepetition() {
       </form>
     </div>
   
-    <div className='div-result'>
-          <h2 className='result'>{t('calc.result')} {result}</h2>
+    <div className='div-result-method'>
+          <h2>{t('calc.result')} {result} </h2>
     </div>
     
     </>

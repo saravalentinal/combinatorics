@@ -30,6 +30,9 @@ export default function VariationWithRepetition() {
   return (
     <>
     <div className='calc-box'>
+
+    <p className='title-method'>{t('examples.var_with_rep_title')}</p>
+
       <form onSubmit={submitHandler}>
   
         <div className='numbers'>
@@ -51,8 +54,8 @@ export default function VariationWithRepetition() {
       </form>
     </div>
   
-    <div className='div-result'>
-          <h2 className='result'>{t('calc.result')} {result} </h2>
+    <div className='div-result-method'>
+          <h2>{t('calc.result')} {result} </h2>
     </div>
     
     </>

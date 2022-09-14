@@ -22,37 +22,116 @@
 }
 
 #dark{
-    background-color: #121212;
+    background-color: #1e1e1e;
 }
 
 #dark .logo{
-    color: #fff;
+    color:  #569cd6;
+}
+
+#dark .dos{
+    color: #4fc1ff;
 }
 
 #dark .options button{
-    color: #fff;
-}
-
-#dark .numbers h2{
-    color: #fff
+    border: solid 1px #808080;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #808080;
 }
 
 #dark .calculate-button button{
-    background-color: #fff;
-    color: #121212;
+    background-color: #de6649;
+    color: #eceff1;
+}
+
+#dark #trueCalcButton{
+    animation: moveDown ease-in-out 0.2s;
+    animation-fill-mode: both;
+}
+
+#dark #true{
+    background-color: transparent;
+    color: #4fc1ff;
+    border: solid 1px #4fc1ff;
 }
 
 #dark .dont-know h3{
     color: #fff;
 }
 
-#dark .calc-box{
-    box-shadow: 0px 0px 12px #808080;
+#dark .calc-box, #dark .calc-box-method{
+    background-color: #80808060;
 }
 
 #dark .settings button{
+    color: #808080;
+}
+
+#dark .numbersPermutation h2, #dark .numbers h2, #dark .method-main div h2{
     color: #eceff1;
 }
+
+#dark .numbersPermutation input, #dark .numbers input, #dark .method-main div input{
+    background-color: #b6b6b6;
+}
+
+#dark .method-div button{
+    border: solid 1px #808080;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #808080;
+}
+
+#dark .toggle-div button{
+    color: #eceff1;
+    font-weight: 500;
+} 
+
+#dark #Si{
+    background-color: #de6649;
+}
+
+#dark #No{
+    background-color: #569cd6;
+}
+
+#Si, #No{
+    transition: background-color 0.2s ease-in-out;
+}
+
+#dark .div-result-method{
+    border-top: solid 1px #808080;
+}
+
+#dark .div-result-method h2{
+    color: #eceff1;
+}
+
+#dark .title-method{
+    color: #4fc1ff;
+}
+
+#dark .method-main div input:focus{
+    border: none;
+    outline: none;
+    background-color: #eceff1;
+}
+
+#dark .method-main div input{
+    transition: background-color 0.2s ease-in-out;
+}
+
+#dark .numbersPermutation div input:focus{
+    border: none;
+    outline: none;
+    background-color: #eceff1;
+}
+
+#dark .numbersPermutation div input{
+    transition: background-color 0.2s ease-in-out;
+}
+
 
 /* NAVBAR */
 .settings{
@@ -88,11 +167,18 @@
 .logo{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5em;
+    font-weight: 600;
     margin:0;
     padding:0;
-    color:hsl(202, 84%, 10%);
+    color:#1e1e1e;
 }
 
+.dos{
+    font-size: 1.3em;
+    position: relative;
+    top: 5px;
+    color: #2979FF;
+}
 
 .settings button{
     padding: 8px;
@@ -124,21 +210,16 @@
     width: 100%;
     border: none;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: white;
     font-size: 90%;
     font-family: 'Montserrat', sans-serif;
     color: hsl(202, 84%, 10%);
-    font-weight: 600;
-}
-
-#trueCalcButton{
-    animation: moveDown ease-in-out 0.2s;
-    animation-fill-mode: both;
+    font-weight: 500;
 }
 
 #true{
-    background-color: white;
-    color: black;
+    background-color: #2962FF;
+    color: white;
 }
 
 #li-options{
@@ -160,12 +241,12 @@
     width: 100%;
     padding: 15px;
     border: none;
+    background-color: white;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.4);
     font-size: 90%;
     font-family: 'Montserrat', sans-serif;
-    color: hsl(202, 84%, 10%);
-    font-weight: 600;
+    color: #1e1e1e;
+    font-weight: 500;
 }
 
 /* Main Calc */
@@ -198,7 +279,15 @@
     margin: 10px 0 0 0;
     border-radius: 5px;
     border:none;
-} 
+
+    background-color:#eceff1;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.numbers div input:focus, .numbersPermutation div input:focus, .method-main div input:focus{
+    outline: none;
+    background-color: #2962ff4f;
+}
 
 .calculate-button{
     text-align: center;
@@ -206,7 +295,7 @@
 
 .calculate-button button{
     position:relative;
-    background-color: black;
+    background-color: #1e1e1e;
     color: #fff;
     font-size: 20px;
     padding: 15px 30px;
@@ -215,7 +304,6 @@
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    box-shadow: hsla(226, 84%, 10%, 0.152) 0px 6px 0px;
 }
 
 .result{
@@ -234,9 +322,9 @@
 }
 
 .calc-box, .calc-box-method{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: white;
     border-radius: 5px;
-    padding: 80px 40px;
+    padding: 50px 40px;
     max-width: 500px;
     margin: 0 auto;
     box-shadow: 0px 0px 12px transparent;
@@ -264,7 +352,7 @@
 
 .method-main{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.8fr 0.8fr;
     grid-gap: 10px;
     align-items: center;
     width: 100%;
@@ -276,14 +364,25 @@
     width: 100%;
     border-radius: 5px;
     border: none;
+    background-color: #eceff1;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .method-main div h2{
     font-size: 17px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     color: hsl(202, 84%, 10%);
     margin: 0;
     padding: 0;
+}
+
+#Si{
+    background-color:#00C853;
+}
+
+#No{
+    background-color: #1e1e1e;
 }
 
 .calc-box-method{
@@ -304,9 +403,10 @@
 .toggle-div button{
     padding: 8px;
     border:none;
-    background-color: white;
     border-radius: 5px;
     width: 100%;
+    color:white;
+    font-weight: 500;
 }
 
 .div-result-method{
@@ -318,15 +418,60 @@
 .div-result-method h2{
     text-align: center;
     font-size: 17px;
-    font-weight: 600;
-    padding: 15px;
+    font-weight: 500;
+    padding: 20px;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: hsl(202, 84%, 10%);
 
 }
 
+.title-method{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    margin:0;
+    padding: 0 0 40px 0;
+    color: #2962FF;
+}
 
+.ripple-btn{
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-btn > .ripple {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: white;
+
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    animation: ripple-effect 1s ease 1 forwards;
+}
+
+@keyframes ripple-effect {
+    0% {
+        width: 0px;
+        height: 0px;
+
+        opacity: 0.5px;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+.ripple_btn > .content-children{
+    position: relative;
+    z-index: 2;
+
+    pointer-events: none;
+}
 /* Section Q&A */
 
 .title-questions{
