@@ -21,28 +21,32 @@
     background-color: #eceff1;
 }
 
+#light .options div button, #light .calc-box-method, #light .calc-box, #light .method-div button, #light #true{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 #dark{
     background-color: #1e1e1e;
 }
 
 #dark .logo{
-    color:  #569cd6;
+    color:  #b6b6b6;
 }
 
 #dark .dos{
-    color: #4fc1ff;
+    color: #82B1FF;
 }
 
 #dark .options button{
-    border: solid 1px #808080;
+    border: solid 1px #b6b6b6;
     background-color: transparent;
     border-radius: 5px;
-    color: #808080;
+    color: #b6b6b6;
 }
 
 #dark .calculate-button button{
-    background-color: #de6649;
-    color: #eceff1;
+    background-color: #00C853;
+    color: white;
 }
 
 #dark #trueCalcButton{
@@ -52,8 +56,8 @@
 
 #dark #true{
     background-color: transparent;
-    color: #4fc1ff;
-    border: solid 1px #4fc1ff;
+    color: #82B1FF;
+    border: solid 1px #82B1FF;
 }
 
 #dark .dont-know h3{
@@ -65,7 +69,7 @@
 }
 
 #dark .settings button{
-    color: #808080;
+    color: #b6b6b6;
 }
 
 #dark .numbersPermutation h2, #dark .numbers h2, #dark .method-main div h2{
@@ -77,10 +81,10 @@
 }
 
 #dark .method-div button{
-    border: solid 1px #808080;
+    border: solid 1px #b6b6b6;
     background-color: transparent;
     border-radius: 5px;
-    color: #808080;
+    color: #b6b6b6;
 }
 
 #dark .toggle-div button{
@@ -89,11 +93,13 @@
 } 
 
 #dark #Si{
-    background-color: #de6649;
+    background-color: #00C853;
+    color: #1e1e1e;
 }
 
 #dark #No{
-    background-color: #569cd6;
+    background-color: #82B1FF;
+    color:#1e1e1e;
 }
 
 #Si, #No{
@@ -109,7 +115,7 @@
 }
 
 #dark .title-method{
-    color: #4fc1ff;
+    color:#82B1FF;
 }
 
 #dark .method-main div input:focus{
@@ -331,29 +337,22 @@
     border-radius: 8px;
 }
 
-.dont-know{
-    font-size: 16px;
-    padding: 20px 0 50px 0;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration:underline;
-    text-align: center;
-    color:hsl(202, 84%, 15%);
-}
-
 .numbers h2, .numbersPermutation h2{
     font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .divisory_line{
-    border-top: hsla(202, 84%, 15%, 0.414) 0.1px solid;
+    border-top: solid 3px #82B1FF;
     width: 240px;
-    margin: 0 auto;
+    margin: 15px auto;
 }
 
 .method-main{
     display: grid;
     grid-template-rows: 1fr 1fr 0.8fr 0.8fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
     align-items: center;
     width: 100%;
 }
@@ -370,9 +369,9 @@
 
 .method-main div h2{
     font-size: 17px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    color: hsl(202, 84%, 10%);
+    color: #1e1e1e;
     margin: 0;
     padding: 0;
 }
@@ -479,7 +478,7 @@
     font-weight: 600;
     margin:0;
     padding-top: 70px;
-    color:hsl(202, 84%, 15%);
+    color:#1e1e1e;
 }
 
 .questions-section{
@@ -496,13 +495,13 @@
 .question{
     font-size: 1.4em;
     font-weight: 600;
-    color:hsl(202, 84%, 15%);
+    color:#1e1e1e;
 }
 
 .example_title{
     font-size: 1em;
     font-weight: 600;
-    color:hsl(202, 84%, 15%);
+    color:#1e1e1e;
     padding: 10px 0;
     margin:0;
 }
@@ -510,7 +509,7 @@
 .example_subtitle{
     font-size: 1em;
     font-weight: 600;
-    color:hsl(202, 84%, 15%);
+    color:#1e1e1eda;
     padding: 15px 0 0 0;
     margin:0;
 }
@@ -521,24 +520,27 @@
     display: block;
     width: 24px;
     padding-top: 8px;
-    border-bottom: 4px solid rgb(26, 147, 218);
-    opacity: 0.6;
+    border-bottom: 4px solid #82B1FF;
 }
 
 .answer, .answer_explanation{
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
     padding: 0;
-    margin: 40px 0;
-    color:hsl(202, 12%, 42%)
+    margin: 30px 0;
+    color: #1e1e1eda;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6em;
 }
 
 .answer_example{
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 20px 0;
-    color:hsl(202, 12%, 42%)
+    color: #1e1e1eda;
+    line-height: 1.6em;
 }
 
 .answer_explanation::before{
@@ -547,7 +549,7 @@
     width: 30%;
     margin: 0 auto;
     padding: 20px 0;
-    border-top: solid 4px rgb(26, 147, 218);
+    border-top: solid 1px #1e1e1eb0;
     opacity: 0.6;
 }
 
@@ -557,22 +559,22 @@
 }
 
 .firstApple{
-    color:#121212;
+    color:#448AFF;
     margin: 0 15px;
 }
 
 .secondApple{
-    color: #607D8B;
+    color: #808080be;
     margin: 0 15px;
 }
 
 .thirdApple{
-    color:#CFD8DC;
+    color:#1e1e1eb3;
     margin: 0 15px;
 }
 
 .div-apples{
-    font-size: 60px;
+    font-size: 45px;
     text-align: center;
 }
 
@@ -628,17 +630,17 @@
     margin: 20px 0;
     font-weight: 400;
     font-size: 12px;
-    color:hsl(202, 12%, 32%)
+    color:#1e1e1ece;
 }
 
 .made-by{
     margin: 20px 0;
     font-size: 15px;
-    color:hsl(202, 84%, 15%);
+    color:#1e1e1e;
 }
 
 .alejandro, .valentina{
-    color: rgb(26, 147, 218);
+    color: #448AFF;
     text-decoration: none;
     font-weight: 600;
 }
