@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export default function MethodCalculator({children, onClick}) {
+export default function MethodCalculator(/* {children, onClick} */) {
 
   const { t } = useTranslation();
 
@@ -17,13 +17,13 @@ export default function MethodCalculator({children, onClick}) {
   const [totalNumber, setTotalNumber] = useState(0)
   const [groupNumber, setGroupNumber] = useState(0)
 
-  const [isRipple, setIsRipple] = useState(false);
+/*   const [isRipple, setIsRipple] = useState(false);
   const [coords, setCoords] = useState({x: -1, y: -1});
 
   const [isRipple2, setIsRipple2] = useState(false);
-  const [coords2, setCoords2] = useState({x: -1, y: -1});
+  const [coords2, setCoords2] = useState({x: -1, y: -1}); */
 
-  useEffect(() => {
+/*   useEffect(() => {
     if(coords.x != -1 && coords.y != -1){
         setIsRipple(true);
 
@@ -36,9 +36,9 @@ export default function MethodCalculator({children, onClick}) {
     useEffect(() => {
       if(!isRipple) setCoords({ x: -1, y: -1});
     },[isRipple]);
+ */
 
-
-    useEffect(() => {
+/*     useEffect(() => {
       if(coords2.x != -1 && coords2.y != -1){
           setIsRipple2(true);
   
@@ -46,12 +46,12 @@ export default function MethodCalculator({children, onClick}) {
       } else {
           setIsRipple2(false);
       }
-  },[coords2]);
+  },[coords2]); */
   
-      useEffect(() => {
+/*       useEffect(() => {
         if(!isRipple2) setCoords2({ x: -1, y: -1});
       },[isRipple2]);
-
+ */
 
     const handleToggleOrder = (e) => {
 
@@ -65,19 +65,19 @@ export default function MethodCalculator({children, onClick}) {
           setOrder(['No'])
       }
 
-
+/* 
       setCoords({
           x: e.clientX - e.target.offsetLeft,
           y: e.clientY - e.target.offsetTop,
       });
 
-      onClick && onClick(e);
+      onClick && onClick(e); */
   };
 
 
-  useEffect(() => {
+/*   useEffect(() => {
     if(!isRipple2) setCoords2({ x: -1, y: -1});
-  },[isRipple2]);
+  },[isRipple2]); */
 
 
   const handleToggleRep = (e) => {
@@ -93,12 +93,12 @@ export default function MethodCalculator({children, onClick}) {
   }
 
 
-    setCoords2({
+/*     setCoords2({
         x: e.clientX - e.target.offsetLeft,
         y: e.clientY - e.target.offsetTop,
     });
 
-    onClick && onClick(e);
+    onClick && onClick(e); */
 };
 
   useEffect(() => {
@@ -240,10 +240,10 @@ export default function MethodCalculator({children, onClick}) {
 
           <div className='toggle-div'>
             <h2>{t('calc.order')}</h2>
-            {/* <button type='button' onClick={handleToggleOrder}>{order}</button> */}
+            <button type='button' onClick={handleToggleOrder} id={order}>{order}</button>
 
 
-            <button onClick={handleToggleOrder} className='ripple-btn' type='button' id={order}>
+{/*             <button onClick={handleToggleOrder} className='ripple-btn' type='button' id={order}>
               {order}
               {isRipple ?  (
                   <span 
@@ -255,15 +255,15 @@ export default function MethodCalculator({children, onClick}) {
               ) : ( "" ) 
               } 
               <span className='content-children'>{children}</span>
-          </button>
+          </button> */}
 
           </div>
 
           <div className='toggle-div'>
             <h2>{t('calc.rep')}</h2>
-{/*             <button type='button' onClick={handleToggleRep}>{rep}</button> */}
+            <button type='button' onClick={handleToggleRep} id={rep}>{rep}</button>
 
-            <button onClick={handleToggleRep} className='ripple-btn' type='button' id={rep}>
+{/*             <button onClick={handleToggleRep} className='ripple-btn' type='button' id={rep}>
               {rep}
               {isRipple2 ?  (
                   <span 
@@ -275,7 +275,7 @@ export default function MethodCalculator({children, onClick}) {
               ) : ( "" ) 
               } 
               <span className='content-children'>{children}</span>
-          </button>
+          </button> */}
           </div>
   
         </div>
