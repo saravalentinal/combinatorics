@@ -18,8 +18,14 @@ const languages = [
   {
     code : 'es',
     name : 'Español',
-    country_code : 'es',
-    img :"https://flagcdn.com/es.svg"
+    country_code : 'ar',
+    img :"https://flagcdn.com/ar.svg"
+  },
+  {
+    code : 'de',
+    name : 'Deutsch',
+    country_code : 'de',
+    img :"https://flagcdn.com/de.svg"
   },
 ]
 
@@ -41,6 +47,8 @@ function App() {
   };
 
   return (
+
+    
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
   <>
     <div className='main-app' id={theme}>

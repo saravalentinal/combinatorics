@@ -24,8 +24,13 @@ export default function VariationWithoutRepetition() {
     }
 
     function variationWithoutRepetitionFormula(){
-      const result = recursiveFactorial(totalNumber) / recursiveFactorial(totalNumber - groupNumber);
-      return result
+      if(isNaN(totalNumber) || isNaN(groupNumber)){
+        return '';
+      } else {
+        const result = recursiveFactorial(totalNumber) / recursiveFactorial(totalNumber - groupNumber);
+        return result
+      }
+    
     }
 
     setResult(variationWithoutRepetitionFormula());
