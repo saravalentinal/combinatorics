@@ -47,8 +47,8 @@ export default function Permutation()
   
         </div>
   
-        <CalculateButton></CalculateButton>
-  
+         <CalculateButton></CalculateButton>
+
       </form>
     </div>
   

@@ -138,6 +138,10 @@
     transition: background-color 0.2s ease-in-out;
 }
 
+#dark .background-questions{
+    background-color: rgb(102, 102, 102);
+}
+
 
 /* NAVBAR */
 .settings{
@@ -295,22 +299,38 @@
     background-color: #2962ff4f;
 }
 
-.calculate-button{
+ .calculate-button{
     text-align: center;
 }
 
-.calculate-button button{
-    position:relative;
-    background-color: #1e1e1e;
-    color: #fff;
-    font-size: 20px;
+ .calc-button {
     padding: 15px 30px;
     margin: 40px 0 0 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: white;
+    background-color: #1e1e1e;
     border: none;
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+   }
+
+   .calc-button:hover{
+    background-color: #82B1FF;
+    box-shadow: 0px 15px 20px #82b2ff48;
+    color: #fff;
+    transform: translateY(-7px);
+   }
+
+   .calc-button:active {
+        transform: translateY(-1px);
+       }
+
 
 .result{
     margin: 0 auto;
@@ -689,4 +709,21 @@
     .list-apples-div{
         display: flex;
     }
+}
+
+
+.number-circle{
+    color:#1e1e1e;
+    display:inline-block;
+    border: solid 2px #00C853;
+    width: 30px;
+    font-size: 14px;
+    height: 30px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 100%;
+
+    display: table-cell;
+    vertical-align: middle;
 }
