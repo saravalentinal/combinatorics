@@ -1,10 +1,15 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 
-export default function MethodCalculator() {
+export default function MethodCalculator({children, onClick}) {
 
   const { t } = useTranslation();
+
+  const [isRipple, setIsRipple] = useState(false);
+  const [coords, setCoords] = useState({x: -1, y: -1});
+
+  const [isRipple2, setIsRipple2] = useState(false);
+  const [coords2, setCoords2] = useState({x: -1, y: -1});
 
   const [result, setResult] = useState(['']);
 
@@ -16,6 +21,30 @@ export default function MethodCalculator() {
 
   const [totalNumber, setTotalNumber] = useState(0)
   const [groupNumber, setGroupNumber] = useState(0)
+
+  useEffect(() => {
+    if(coords.x != -1 && coords.y != -1){
+        setIsRipple(true);
+
+        setTimeout(() => setIsRipple(false), 1000)
+    } else {
+        setIsRipple(false);
+    }
+  },[coords]);
+
+  useEffect(() => {
+    if(coords2.x != -1 && coords2.y != -1){
+        setIsRipple2(true);
+
+        setTimeout(() => setIsRipple2(false), 1000)
+    } else {
+        setIsRipple2(false);
+    }
+  },[coords2]);
+
+  useEffect(() => {
+    if(!isRipple) setCoords({ x: -1, y: -1});
+  },[isRipple]);
 
     const handleToggleOrder = (e) => {
 
@@ -29,22 +58,41 @@ export default function MethodCalculator() {
           setOrder(['No'])
       }
 
+      setCoords({
+        x: e.clientX - e.target.offsetLeft,
+        y: e.clientY - e.target.offsetTop,
+    });
+
+    onClick && onClick(e);
+
+  };
+
+  useEffect(() => {
+    if(!isRipple2) setCoords2({ x: -1, y: -1});
+  },[isRipple2]);
+
+    const handleToggleRep = (e) => {
+
+      setActiveRep(!activeRep)
+
+      if(activeRep === true){
+          setRep(['Si'])
+      }
+  
+      if(activeRep === false){
+          setRep(['No'])
+      }
+
+      setCoords2({
+        x: e.clientX - e.target.offsetLeft,
+        y: e.clientY - e.target.offsetTop,
+    });
+
+    onClick && onClick(e);
+
   };
 
 
-  const handleToggleRep = (e) => {
-
-    setActiveRep(!activeRep)
-
-    if(activeRep === true){
-      setRep(['Si'])
-  }
-
-  if(activeRep === false){
-      setRep(['No'])
-  }
-
-};
 
   useEffect(() => {
 
@@ -160,12 +208,39 @@ export default function MethodCalculator() {
 
           <div className='toggle-div'>
             <h2>{t('calc.order')}</h2>
-            <button type='button' onClick={handleToggleOrder} id={order}>{order}</button>
+
+            <button onClick={handleToggleOrder} className='ripple-btn' type='button' id={order}>
+              {order}
+              {isRipple ?  (
+                  <span 
+                  className='ripple' 
+                  style={{
+                  left: coords.x,
+                  top: coords.y,
+              }}/> 
+              ) : ( "" ) 
+              } 
+              <span className='content-children'>{children}</span>
+            </button>
           </div>
 
           <div className='toggle-div'>
             <h2>{t('calc.rep')}</h2>
-            <button type='button' onClick={handleToggleRep} id={rep}>{rep}</button>
+            {/* <button type='button' onClick={handleToggleRep} id={rep}>{rep}</button> */}
+
+            <button onClick={handleToggleRep} className='ripple-btn' type='button' id={rep}>
+              {rep}
+              {isRipple2 ?  (
+                  <span 
+                  className='ripple' 
+                  style={{
+                  left: coords2.x,
+                  top: coords2.y,
+              }}/> 
+              ) : ( "" ) 
+              } 
+              <span className='content-children'>{children}</span>
+            </button>
           </div>
   
         </div>
