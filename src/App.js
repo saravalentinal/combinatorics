@@ -83,12 +83,14 @@ function App() {
       </div>
     </div>
     
+    <div id={theme}>
     <div className='background-questions'>
     <section className='questions-section'>
           <h1 className='title-questions' id="question-title">{t('questions.title')}</h1>
           <Questions></Questions>
       </section>
       </div>
+    </div>
 
       <footer className='footer-box'>
         <Footer/>
