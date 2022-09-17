@@ -15,8 +15,12 @@ export default function VariationWithRepetition() {
     const groupNumber = parseInt(e.target.total2.value, 10);
 
     function variationWithRepetitionFormula(){
-      const result = Math.pow(totalNumber, groupNumber);
-      return result
+      if(isNaN(totalNumber) || isNaN(groupNumber)){
+        return '';
+      } else {
+        const result = Math.pow(totalNumber, groupNumber);
+        return result;
+      }
     }
 
     setResult(variationWithRepetitionFormula());

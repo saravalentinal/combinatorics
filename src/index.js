@@ -8,16 +8,24 @@ import App from './App';
 
 import './i18n';
 
-const loadingMarkUp = ( <div> <h2> Loading... </h2></div>)
+const loadingMarkUp = 
+
+( <body class="body-loader">
+<div class="div-loader">
+    <div class="loader"></div>
+    <h1>Preparando calculadoras...</h1>
+  </div>
+</body> )
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
 <Suspense fallback={loadingMarkUp}>
 
-<React.StrictMode>
+  <React.StrictMode>
+
     <Router>
-    <App />
+      <App />
     </Router>
     
   </React.StrictMode>

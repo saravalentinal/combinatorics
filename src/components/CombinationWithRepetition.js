@@ -24,8 +24,12 @@ export default function CombinationWithRepetition() {
     }
 
     function combinationWithRepetitionFormula(){
-      const result = recursiveFactorial(totalNumber + (groupNumber - 1)) / (recursiveFactorial(totalNumber - 1) * recursiveFactorial(groupNumber));
-      return result
+      if(isNaN(totalNumber) || isNaN(groupNumber)){
+        return '';
+      }else{
+        const result = recursiveFactorial(totalNumber + (groupNumber - 1)) / (recursiveFactorial(totalNumber - 1) * recursiveFactorial(groupNumber));
+        return result;
+      }
     }
 
     setResult(combinationWithRepetitionFormula());

@@ -1,11 +1,11 @@
 
 { 
     "questions" : {
-                    "title":"Entendiendo cómo funciona la Combinatoria",
-                    "first": "¿Qué es la Combinatoria?",
+                    "title":"Um zu verstehen wie Combinatory funktioniert",
+                    "first": "¿Was ist Combinatoria?",
                     "second": "Conceptos importantes en la Combinatoria",
-                    "third": "¿Cómo sé qué método debo usar?",
-                    "forth": "¿Cómo sé si importa el orden?",
+                    "third": "¿Wie weiß ist welche method soll ich benutzen?",
+                    "forth": "¿Wie weiß ich ob Ordnung ist wichtig oder nicht?",
                     "fifth": "Repetición"
     },
   
@@ -96,6 +96,6 @@
               "order": "¿Importa el orden?",
               "rep": "¿Se puede repetir?"
     },
-    "language": "Idioma"
+    "language": "Sprache"
 }
 

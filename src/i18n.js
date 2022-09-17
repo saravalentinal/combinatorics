@@ -16,7 +16,7 @@ i18n
 
   .init({
 /*     transSupportBasicHtmlNodes: true, */
-    supportedLngs: ['en', 'es'],
+    supportedLngs: ['en', 'es', 'de'],
     fallbackLng: 'en',
     debug: true,
     detection: {

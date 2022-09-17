@@ -24,8 +24,12 @@ export default function Permutation()
     }
 
     function permutationFormula(){
-      const result = recursiveFactorial(totalNumber);
-      return result
+      if(isNaN(totalNumber)){
+        return '';
+      }else{
+        const result = recursiveFactorial(totalNumber);
+        return result;
+      }
     }
 
     setResult(permutationFormula());
@@ -47,8 +51,8 @@ export default function Permutation()
   
         </div>
   
-        <CalculateButton></CalculateButton>
-  
+         <CalculateButton></CalculateButton>
+
       </form>
     </div>
   

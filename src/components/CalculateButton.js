@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 
 export default function CalculateButton({children, onClick}) {
@@ -7,8 +7,6 @@ export default function CalculateButton({children, onClick}) {
   const [coords, setCoords] = useState({x: -1, y: -1});
   
   const { t } = useTranslation();
-
-  const [active, setActive] = useState(false);
 
   useEffect(() => {
     if(coords.x != -1 && coords.y != -1){
@@ -24,45 +22,39 @@ export default function CalculateButton({children, onClick}) {
     if(!isRipple) setCoords({ x: -1, y: -1});
   },[isRipple]);
 
-  const handleCalculate = (e) => {
-    setActive(true);
 
-    setActive(false);
-
-    requestAnimationFrame(() => 
-    setActive(true)
-    );
+  const handleClick = (e) => {
 
     setCoords({
-      x: e.clientX - e.target.offsetLeft,
-      y: e.clientY - e.target.offsetTop,
-  });
+        x: e.clientX - e.target.offsetLeft,
+        y: e.clientY - e.target.offsetTop,
+    });
 
     onClick && onClick(e);
   };
 
-
   return (
     <>
-          <div className='calculate-button'>
-            {/* <button type='submit' id={active.toString() + 'CalcButton'} onClick={handleCalculate}>{t('calc.button')}</button> */}
 
+  <div className='calculate-button'>
 
-          <button onClick={handleCalculate} className='ripple-btn' type='submit'>
-            {t('calc.button')}
-              {isRipple ?  (
-                  <span 
-                  className='ripple' 
-                  style={{
-                  left: coords.x,
-                  top: coords.y,
-              }}/> 
-              ) : ( "" ) 
-              } 
-              <span className='content-children'>{children}</span>
-          </button>
+        <button onClick={handleClick} className='ripple-btn' type='submit' id="calc-button">
+        {t('calc.button')}
+            {isRipple ?  (
+                <span 
+                className='ripple' 
+                style={{
+                left: coords.x,
+                top: coords.y,
+            }}/> 
+            ) : ( "" ) 
+            } 
+            <span className='content-children'>{children}</span>
+        </button>
+  </div>
 
-          </div>
+  
+
     </>
       
     )

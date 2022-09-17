@@ -9,10 +9,13 @@ export default function CombinationWithoutRepetition() {
 
   const [result, setResult] = useState(['']);
 
+  let totalNumber = 0;
+  let groupNumber = 0;
+
   const submitHandler = e =>{
     e.preventDefault();
-    const totalNumber = parseInt(e.target.total.value,10);
-    const groupNumber = parseInt(e.target.total2.value, 10);
+    totalNumber = parseInt(e.target.total.value,10);
+    groupNumber = parseInt(e.target.total2.value, 10);
     
     function recursiveFactorial(numberToFactorial){
       if (numberToFactorial === 0)
@@ -24,8 +27,12 @@ export default function CombinationWithoutRepetition() {
     }
 
     function combinationFormula(){
-      const result = recursiveFactorial(totalNumber) / (recursiveFactorial(totalNumber - groupNumber) * recursiveFactorial(groupNumber));
-      return result
+      if(isNaN(totalNumber) || isNaN(groupNumber)){
+        return '';
+      }else{
+        const result = recursiveFactorial(totalNumber) / (recursiveFactorial(totalNumber - groupNumber) * recursiveFactorial(groupNumber));
+        return result;
+      }
     }
 
     setResult(combinationFormula());
