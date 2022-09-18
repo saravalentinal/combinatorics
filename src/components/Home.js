@@ -1,8 +1,8 @@
-import Main from './components/Main';
-import './styles.css'
-import './styles.scss'
-import Questions from './components/Questions'
-import Footer from './components/Footer'
+import Main from './Main'
+import '../styles.css'
+import '../styles.scss'
+import Questions from './Questions'
+import Footer from './Footer'
 import { createContext, useState} from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -36,7 +36,7 @@ document.title = 'Combinados';
 
 export const ThemeContext = createContext(null)
 
-function App() {
+function Home() {
 
   const currentLanguageCode = cookies.get('i18next') || 'en';
 
@@ -115,4 +115,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

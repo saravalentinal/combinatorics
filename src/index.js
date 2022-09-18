@@ -10,11 +10,11 @@ import './i18n';
 
 const loadingMarkUp = 
 
-( <body class="body-loader">
-<div class="div-loader">
-    <div class="loader"></div>
-    <h1>Preparando calculadoras...</h1>
-  </div>
+( <body className="body-loader">
+    <div className="div-loader">
+      <div className="loader"></div>
+      <h1 className='loader-h1'>Preparando calculadoras...</h1>
+    </div>
 </body> )
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

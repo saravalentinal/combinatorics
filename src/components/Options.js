@@ -11,7 +11,7 @@ export default function Options() {
   const [active, setActive] = useState(false);
   const [active2, setActive2] = useState(false);
   const [active3, setActive3] = useState(false);
-  const [active4, setActive4] = useState(false);
+  const [active4, setActive4] = useState(true);
 
   const handleCombination = () => {
     setActive(true);
