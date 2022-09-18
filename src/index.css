@@ -258,10 +258,11 @@
     font-weight: 500;
 }
 
-#true{
-    background-color: #2962FF;
-    color: white;
+.true{
+    background-color: #2962FF !important;
+    color: white !important;
 }
+
 
 #li-options{
     font-family: 'Montserrat', sans-serif;
