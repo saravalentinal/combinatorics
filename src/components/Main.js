@@ -1,4 +1,4 @@
-import { React, Navigate} from 'react'
+import { React } from 'react'
 import '../index.css'
 
 import CombinationWithRepetition from './CombinationWithRepetition'
@@ -7,10 +7,8 @@ import Permutation from './Permutation'
 import VariationWithoutRepetition from './VariationWithoutRepetition'
 import VariationWithRepetition from './VariationWithRepetition'
 import MethodCalculator from './MethodCalculator'
-import Error from './Error'
 import Options from './Options'
 import {Routes, Route} from 'react-router-dom'
-
 
 export default function Main() {
 
