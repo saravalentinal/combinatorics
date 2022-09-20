@@ -8,7 +8,7 @@ import VariationWithoutRepetition from './VariationWithoutRepetition'
 import VariationWithRepetition from './VariationWithRepetition'
 import MethodCalculator from './MethodCalculator'
 import Options from './Options'
-import Error from './Error'
+/* import Error from './Error' */
 import {Routes, Route} from 'react-router-dom'
 
 export default function Main() {
@@ -24,7 +24,7 @@ export default function Main() {
           <Route path='/variationWithoutRepetition' exact element={<VariationWithoutRepetition/>}/>
           <Route path='/variationWithRepetition' exact element={<VariationWithRepetition/>}/>
           <Route path='/' exact element={<MethodCalculator/>}/>
-          <Route path='*' element={<Error/>}></Route>
+          <Route path='*' element={<MethodCalculator/>}></Route>
         </Routes>
       </div>
     </>

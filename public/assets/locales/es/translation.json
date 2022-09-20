@@ -96,6 +96,9 @@
               "order": "¿Importa el orden?",
               "rep": "¿Se puede repetir?"
     },
-    "language": "Idioma"
+    "language": "Idioma",
+    "extras": {
+              "loading_page": "Preparando calculadoras..."
+    }
 }
 

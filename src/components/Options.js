@@ -8,27 +8,8 @@ import { useLocation } from 'react-router-dom';
 export default function Options() {
 
   const location = useLocation();
-
-  console.log('holaaaaa' + location.pathname);
  
   const { t } = useTranslation();
-
-  const handleCombination = () => {
-
-  };
-
-  const handlePermutation = () => {
-
-  };
-
-  const handleVariation = () => {
-
-  };
-
-  const handleMethodCalculator = () => {
-
-  };
-
 
   return (
     <>
