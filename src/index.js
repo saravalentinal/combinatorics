@@ -3,19 +3,39 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router} from 'react-router-dom'
 import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import App from './App';
-
 import './i18n';
 
-const loadingMarkUp = 
+let language = navigator.language || navigator.userLanguage;
 
-( <body className="body-loader">
+let loadingText = '';
+
+switch(language) {
+  case 'de':
+  case 'de-DE':
+  case 'de-AT':
+  case 'de-CH':
+  case 'de-LI':
+     loadingText = 'Rechner vorbereiten...'
+     break;
+  case 'es-AR':
+  case 'es':
+     loadingText = 'Preparando calculadoras...'
+     break;
+  default:
+     loadingText = 'Preparing calculators...'
+     break;
+  }
+
+ const loadingMarkUp = 
+
+(  
+<body className="body-loader">
     <div className="div-loader">
       <div className="loader"></div>
-      <h1 className='loader-h1'>Preparando calculadoras...</h1>
+      <h1 className='loader-h1'>{loadingText}</h1>
     </div>
-</body> )
+</body> ) 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

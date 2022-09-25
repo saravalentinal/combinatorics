@@ -6,35 +6,46 @@ import CalculateButton from './CalculateButton';
 export default function Permutation() 
 {
 
+  /* global BigInt */
+
   const { t } = useTranslation();
 
   const [result, setResult] = useState(['']);
 
+  let totalNumber = BigInt(0);
+
   const submitHandler = e =>{
     e.preventDefault();
-    const totalNumber = parseInt(e.target.total.value,10);
+    totalNumber = parseInt(e.target.total.value,10);
     
-    function recursiveFactorial(numberToFactorial){
-      if (numberToFactorial === 0)
-      {
-        return 1;
+    function factorial (numberToFactorial) {
+      let total = BigInt(1); 
+      for (let i=BigInt(1); i<=numberToFactorial; i++) {
+        total = total * i; 
       }
-
-      return numberToFactorial * recursiveFactorial(numberToFactorial-1)
+      return total; 
     }
 
     function permutationFormula(){
       if(isNaN(totalNumber)){
         return '';
       }else{
-        const result = recursiveFactorial(totalNumber);
-        return result;
+        const result = BigInt(factorial(totalNumber));
+        return result.toString();
       }
     }
 
     setResult(permutationFormula());
 
     e.target.total.value = '';
+  }
+
+  const eraseHandler = () =>{
+    document.getElementById('input-value').value = null;
+  }
+
+  const eraseHandlerResult = () =>{
+    document.getElementById('result').innerHTML = "";
   }
   
   return (
@@ -46,7 +57,11 @@ export default function Permutation()
   
           <div>
             <h2>{t('calc.totalNumber')}</h2>
-            <input type='number' name='total'></input>
+            <input type='number' name='total' min={1} max={9999} id="input-value"></input>
+
+            <div className='div-eraser-button'>
+              <button type='button' onClick={eraseHandler} className="eraser-button">x</button>
+            </div>
           </div>
   
         </div>
@@ -57,7 +72,11 @@ export default function Permutation()
     </div>
   
     <div className='div-result-method'>
-          <h2>{t('calc.result')} {result} </h2>
+          <div className='div-eraser-button'>
+              <button type='button' onClick={eraseHandlerResult} className="eraser-button-result">x</button>
+          </div>
+          <h2>{t('calc.result')}</h2>
+          <h3 id="result">{result}</h3>
     </div>
     
     </>

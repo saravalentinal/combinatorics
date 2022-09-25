@@ -1,101 +1,107 @@
-
 { 
-    "questions" : {
-                    "title":"Um zu verstehen wie Combinatory funktioniert",
-                    "first": "¿Was ist Combinatoria?",
-                    "second": "Conceptos importantes en la Combinatoria",
-                    "third": "¿Wie weiß ist welche method soll ich benutzen?",
-                    "forth": "¿Wie weiß ich ob Ordnung ist wichtig oder nicht?",
-                    "fifth": "Repetición"
-    },
-  
-    "answers": {
-                "first": "Es una rama de las matemáticas que estudia los diferentes <strong> métodos </strong> para <strong> contar </strong> las distintas <strong> agrupaciones </strong> o formas de <strong> ordenar </strong> un determinado número de elementos.",
-                "example_title": "Ejemplo:",
-                "example_explanation": "Supongamos que tenemos 3 objetos diferentes y queremos ordenarlos.",
-                "first_order": "Esta podría ser una forma de hacerlo:",
-                "second_order": "Pero si quisiéramos, podríamos ordenarlos de la siguiente manera:",
-                "third_order": "Y si los ordenara de todas las formas posibles, tendría algo como esto:",
-                "sum_up": "¿Cuántas formas de ordenar hubo? En este caso hubo <strong> 6 formas diferentes.</strong>",
-                "conclusion": "Esto es lo que se busca en los ejercicios de combinatoria, <strong>saber de cuántas maneras distintas se puede organizar cierto grupo de elementos.</strong>",
-                "n_number": "<strong>Población (n) :</strong> es el número de elementos que se están estudiando.",
-                "r_number":  "<strong>Muestra (r) :</strong> de esos elementos de la población, cuantos elementos se seleccionan para ordenar.",
-                "second_example": "Siguiendo con nuestro ejemplo, en este caso la población (n) sería <strong>3</strong>, porque es el <strong>número total</strong> de objetos <strong>distintos</strong> del que disponemos. Por otro lado, el número de la muestra (r) <strong>también sería 3</strong>, ya que para formar las distintas combinaciones, estamos utilizando <strong>todos</strong> los objetos disponibles.",
-                "what_method": "<strong>¿Importa el orden de mis elementos? ¿Usaré todos los elementos?</strong> Hacerse estas preguntas es importante y nos ayudará a definir que método deberemos usar.",
-                "method_combination": "<strong>Combinación: </strong>no importa el orden de los elementos.",
-                "method_permutation": "<strong>Permutación: </strong>sí importa el orden y se trabaja con todos los elementos",
-                "method_variation": "<strong>Variación: </strong>sí importa el orden pero no se trabaja con todos los elementos.",
-                "use_permutation": "Para este caso usaremos la <strong>Permutación</strong>, ya que <strong>nos importa</strong> el orden y trabajamos con <strong>todos los elementos.</strong>",
-                "order": "Para responder esta pregunta podemos ayudarnos de los siguientes pasos:",
-                "step_one": "<strong>1.</strong> Hacer 2 combinaciones diferentes con los mismos elementos.",
-                "step_two": "<strong>2.</strong> Preguntarse: ¿Son diferentes?",
-                "step_one_example": "1",
-                "step_two_example": "2",
-                "order_example": "Son diferentes porque lo que estamos evaluando es el orden de los objetos aunque sean siempre los mismos 3. Por lo tanto, sí importa el orden.",
-                "repetition_concept": "Los métodos con repetición de un conjunto son las distintas formas en que se puede hacer una selección de elementos de un conjunto dado, permitiendo que las <strong>selecciones</strong> puedan <strong>repetirse.</strong>",
-                "repetition_example": "Una vez que hemos decidido si usaremos combinación, permutación o variación, debemos preguntarnos si nuestros elementos pueden o no repetirse. En el caso de nuestros objetos, podríamos suponer que sólo disponemos de un sólo ejemplar de cada uno y nos es imposible aumentar su cantidad. Entonces <strong>no se pueden repetir</strong> nuestros elementos."
-    },
+      "questions": {
+                  "title":"Verstehen, wie Kombinatorik funktioniert",
+                  "first": "Was ist Kombinatorik?",
+                  "second": "Wichtige Konzepte zu Kombinatorik",
+                  "third": "Woher soll ich wissen welche Methode ich anwenden soll?",
+                  "forth": "Woher soll ich wissen ob die Reihenfolge meine Elemente wichtig ist?",
+                  "fifth": "Woher soll ich wissen ob meine Elemente wiederholt werden können?"
+                },
 
-    "examples": {
-                "main_title": "Ejemplos",
-                "comb_without_rep_title": "Combinación sin repetición",
-                "comb_without_rep_ex": "De un grupo de 10 estudiantes se quiere seleccionar un comité de 3 personas ¿De cuantas formas diferentes se puede seleccionar el comité?",
-                "is_order_important": "¿Importa el orden?",
-                "comb_without_rep_order": "En este caso los 3 estudiantes realizarán la misma tarea, es decir, representar el comité, entonces no importa si me seleccionan primero segundo o tercero, como voy a hacer lo mismo que los demás, no importa el orden.",
-                "can_we_repeat": "¿Se puede repetir?",
-                "comb_without_rep_rep": "No se puede repetir el mismo alumno más veces, porque entonces no estariamos eligiendo 3 alumnos sino solamente 2 o 1.",
-                "how_many_elements": "¿Usaremos todos los elementos?",
-                "comb_without_rep_how_many": "Escogeremos sólo 3 estudiantes de un grupo de 10.",
-
-                "comb_with_rep_title": "Combinación con repetición",
-                "comb_with_rep_ex": "En una heladeria ofrecen 7 diferentes sabores. ¿Cuantas combinaciones de helado de 3 bochas puedo hacer?",
-                "comb_with_rep_order": "Queremos pedir un helado de 3 sabores, por ejemplo: frutilla, vainilla y chocolate. Es lo mismo si lo sirven como vainilla - chocolate -frutilla o si lo sirven como chocolate - vainilla - frutilla. Tendré en el cono todos los sabores que he pedido, por lo que no importa el orden.",
-                "comb_with_rep_rep": "Si quisiéramos, podríamos pedir un helado de 3 bochas del mismo sabor, por lo que si se puede repetir.",
-                "comb_with_rep_how_many": "De 7 opciones de sabores diferentes, eligiremos sólo para 3 bochas de helado.",
-
-                "permutation_title": "Permutación",
-                "permutation_ex": "En un colegio se realiza un campeonato entre 4 equipos. ¿De cuantas formas pueden quedar los equipos al final del campeonato?",
-                "permutation_order": "Cada equipo buscarán ganar y obtener el primer puesto. No es lo mismo quedar en primer lugar que en segundo, tercero o cuarto, por lo tanto si importa el orden.",
-                "permutation_rep": "El equipo que quede en primer lugar, ya no quedará en el segundo y así consecutivamente, por lo que no se puede repetir.",
-                "permutation_how_many": "Se usan todos los elementos, ya que de los 4 equipos que compiten, cada uno ocupará alguno de los 4 puestos.",
-
-                "var_without_rep_title": "Variación sin repetición",
-                "var_without_rep_ex": "En un curso de 10 estudiantes se desea escoger presidente, vicepresidente y secretario. ¿De cuántas formas se pueden seleccionar los 3 estudiantes?",
-                "var_without_rep_order": "Se va a seleccionar una persona que será presidente otra será vicepresidente y otra sera secretario, como no van a realizar las mismas tareas, sí importa el orden.",
-                "var_without_rep_rep": "No se puede repetir porque sólo podemos escoger una vez a cada estudiante, el mismo no podrá ser elegido para mas de un puesto a la vez.",
-                "var_without_rep_how_many": "Solo serán elegidos 3 estudiantes de un grupo de 10.",
-
-                "var_with_rep_title": "Variación con repetición",
-                "var_with_rep_ex": "Con las cifras 1,2,3,4,5,6 y 7 ¿Cuántos números de 3 cifras se pueden formar?",
-                "var_with_rep_oder": "Si intercambiamos las cifras 2, 5 y 6, uno de los números que podriamos obtener - 256 - no es el mismo que - 625 - o - 562. Por lo tanto sí importa el orden.",
-                "var_with_rep_rep": "Como se piden números de 3 cifras pero no se especifícan que las cifras deben ser distintas, se puede repetir, ya que algunos de los números que voy a obtener podrían ser 222 o 555.",
-                "var_with_rep_how_many": "De las 7 cifras dadas sólo formaremos números de 3 cifras, por lo que trabajaremos con algunos elementos."
-    },
-  
-    "footer": {
-                "made": "Creado por ",
-                "and": "y",
-                "rights": "@Combinados 2022. Todos los derechos reservados."
-    },
-  
-    "options": {
-                "one": "Combinación ",
-                "two": "Permutación",
-                "three": "Variación ",
-                "choose": "¿No sabes cuál es la opción correcta para tí?",
-                "four": "Calculadora de método"
+                "answers": {
+                  "first": "Es ist ein Zweig der Mathematik, der die verschiedenen Methoden zum Zählen der verschiedenen Gruppierungen oder Möglichkeiten zum Ordnen einer bestimmten Anzahl von Elementen untersucht.",
+                  "example_title": "Beispiel:",
+                  "example_explanation": "Nehmen wir an, wir haben 3 Objekte, welche wir ordnen möchten.",
+                  "first_order": "Dies könnte ein Weg sein, um es durchzuführen:",
+                  "second_order": "Sofern wir wollen, können wir die Reihenfolge wie folgt anordnen:",
+                  "third_order": "Und wenn wir sie auf jede erdenkliche Weise anordnen würden, hätten wir so etwas:",
+                  "sum_up": "Wie viele Anordnungsmöglichkeiten gab es? In diesem Fall gab es 6 verschiedene Möglichkeiten.",
+                  "conclusion": "Das ist der Grund weshalb wir Kombinatorik-Übungen suchen, um zu erfahren, auf wie viele <strong>verschiedene</strong> Arten wir eine bestimmte Gruppe von Elementen anordnen können.",
+                  "n_number": "<strong>Population (n) :</strong> hierbei handelt es sich um die Gesamtzahl der untersuchten Elemente.",
+                  "r_number":  "<strong>Sample (r) :</strong> die Menge an Elementen, die aus der zu ordnenden Grundgesamtheit ausgewählt werden.",
+                  "second_example": "Nach unserem Beispiel wäre Population (n) in diesem Fall 3, da es sich um die Gesamtzahl der verschiedenen Objekte handelt, über die wir verfügen. Andererseits wäre die Stichprobennummer (r) auch 3, denn um eindeutige Kombinationen zu bilden, verwenden wir alle unsere verfügbaren Objekte.",
+                  "what_method": "Ist die Reihenfolge meiner Elemente wichtig? Werde ich alle meine Elemente verwenden? Es ist wichtig, sich diese Fragen zu stellen, und sie werden uns bei der Frage helfen, welche Methode wir verwenden sollten.",
+                  "method_combination": "<strong>Kombination:</strong> Die Reihenfolge der Elemente ist nicht wichtig.",
+                  "method_permutation": "<strong>Permutation:</strong> Die Anordnung ist wichtig und wir arbeiten mit jedem Element.",
+                  "method_variation": "<strong>Variation:</strong> Die Anordnung ist wichtig, aber wir arbeiten nicht mit allen unseren Elementen.",
+                  "use_permutation": "In diesem Fall wählen wir Permutation, da uns die Reihenfolge wichtig ist und wir mit jedem Element arbeiten.",
+                  "order": "Um diese Fragen zu beantworten, können wir uns in den nächsten Schritten helfen:",
+                  "step_one": "<strong>1.</strong> Mach 2 verschiedene Kombinationen mit den gleichen Elementen.",
+                  "step_two": "<strong>2.</strong> Frag Sie sich: Sind sie gleich?",
+                  "step_one_example": "1",
+                  "step_two_example": "2",
+                  "order_example": "Sie sind unterschiedlich, weil wir die Reihenfolge der Objekte auswerten, obwohl die immer dieselben sind. Daher ist die Reihenfolge wichtig.",
+                  "repetition_concept": "Methoden mit Wiederholung in einer Menge sind die verschiedenen Formen, in denen wir eine Auswahl von Elementen einer bestimmten Gruppe anordnen können, wodurch die Auswahl wiederholt werden können.",
+                  "repetition_example": "Nachdem wir uns bereits entschieden haben, ob wir Kombination, Permutation oder Variation verwenden werden, müssen wir uns fragen, ob unsere Elemente wiederholt werden können oder nicht. In unserem vorherigen Beispiel könnten wir annehmen, dass wir nur eine Kopie von jeder haben und es uns unmöglich ist, ihre Menge zu erhöhen. Daher können unsere Elemente nicht wiederholt werden."
       },
   
-    "calc": {
-              "totalNumber": "Número Total (n)",
-              "groupNumber": "Número del Grupo (r)",
-              "button": "CALCULAR",
-              "result": "Resultado:",
-              "types": "¿Cuántos elementos diferentes tienes para elegir?",
-              "numberChosen": "¿Cuántos elementos has elegido?",
-              "order": "¿Importa el orden?",
-              "rep": "¿Se puede repetir?"
-    },
-    "language": "Sprache"
+      "examples": {
+                  "main_title": "Beispiele",
+                  "comb_without_rep_title": "Kombination ohne Wiederholung",
+                  "comb_without_rep_ex": "Aus einer Gruppe von 10 Studierenden ist ein 3-köpfiges Gremium zu wählen. Auf wie viele verschiedene Arten kann die Gruppe gewählt werden?",
+                  "is_order_important": "Ist die Reihenfolge wichtig?",
+                  "comb_without_rep_order": "Alle ausgewählten Studenten haben die gleichen Aufgaben, d.h. den Ausschuss zu vertreten. Daher ist es nicht wichtig, ob der Student als Erster, Zweiter oder Dritter ausgewählt wird, da die Person genau das Gleiche wie die anderen tun wird, Reihenfolge ist in diesem Fall nicht wichtig.",
+                  "can_we_repeat": "Können wir wiederholen?",
+                  "comb_without_rep_rep": "Wir können denselben Schüler nicht mehr als einmal auswählen, denn dann würden wir nicht 3 Personen auswählen, sondern nur 2 oder 1.",
+                  "how_many_elements": "Werden wir alle Elemente verwenden?",
+                  "comb_without_rep_how_many": "Wir werden nur 3 Studenten aus einer Gruppe von 10 auswählen.",
+  
+                  "comb_with_rep_title": "Kombination mit Wiederholung",
+                  "comb_with_rep_ex": "In einer Eisdiele werden 7 verschiedene Geschmacksrichtungen angeboten. Wie viele verschiedene 3-Kugel-Eiscreme-Kombinationen kann man bestellen?",
+                  "comb_with_rep_order": "Wir möchten ein Eis mit 3 Geschmacksrichtungen bestellen, zum Beispiel: Erdbeere, Vanille und Schokolade. Die Reihenfolge ist unerheblich. Es ist das gleiche, ob sie es als Vanille - Schokolade - Erdbeere oder als Schokolade - Vanille - Erdbeere servieren. Ich werde den gleichen Kegel mit allen Geschmacksrichtungen haben, die ich bestellt habe, deshalb ist die Reihenfolge hier nicht wichtig.",
+                  "comb_with_rep_rep": "Wenn wir wollten, könnten wir nach einem 3-Kugel-Eis mit genau demselben Geschmack fragen, so dass eine Wiederholung möglich ist.",
+                  "comb_with_rep_how_many": "Aus 7 verschiedenen Geschmacksrichtungen wählen wir nur 3 Eiskugeln aus.",
+  
+                  "permutation_title": "Permutation",
+                  "permutation_ex": "In einer Schule wird eine Meisterschaft zwischen 4 Mannschaften ausgetragen. Auf wie viele Kombinationen bleiben die Teams am Ende der Meisterschaft übrig?",
+                  "permutation_order": "Jedes Team versucht zu gewinnen und den ersten Platz zu erreichen. Den ersten Platz zu gewinnen unterscheidet sich davon den zweiten, dritten oder vierten Platz zu gewinnen. Daher ist die Reihenfolge wichtig.",
+                  "permutation_rep": "Das Team, welches den ersten Platz erreicht, kann den zweiten nicht erreichen und so weiter. Aus diesem Grund können Elemente nicht wiederholt werden.",
+                  "permutation_how_many": "Alle Elemente werden genutzt, denn von 4 teilnehmenden Teams wird jedes einen der 4 Plätze einnehmen.",
+  
+                  "var_without_rep_title": "Variation ohne Wiederholung",
+                  "var_without_rep_ex": "In einer Klasse mit 10 Schülern müssen Präsident, Vizepräsident und Sekretär gewählt werden. Auf wie viele Arten können die 3 Studenten angeordnet werden?",
+                  "var_without_rep_order": "Eine Person wird zum Präsidenten gewählt, eine andere wird Vizepräsidentin und die letzte wird Sekretärin, da sie nicht die gleichen Aufgaben ausüben können. In diesem Fall ist die Ordnung wichtig.",
+                  "var_without_rep_rep": "Die Studenten können nicht wiederholt gewählt werden, da wir jeden Studenten nur einmal wählen können. Die gleiche Person kann nicht gleichzeitig für mehr als eine Position gewählt werden.",
+                  "var_without_rep_how_many": "Aus einer Gruppe von 10 werden nur 3 Studierende gewählt.",
+  
+                  "var_with_rep_title": "Variation mit Wiederholung",
+                  "var_with_rep_ex": "Mit den Zahlen 1,2,3,4,5,6 und 7. Wie viele 3-stellige Zahlen lassen sich bilden?",
+                  "var_with_rep_oder": "Wenn wir die Ziffern 2, 5 und 6 vertauschen, ist eine der Zahlen, die erhalten werden könnten – 256 – nicht die gleiche Menge wie – 625 – oder – 562. Daher ist die Reihenfolge wichtig.",
+                  "var_with_rep_rep": "Da 3 Zahlen erforderlich sind, aber nicht angegeben ist, ob die Zahlen voneinander verschieden sein müssen, können sie wiederholt werden, da einige der Zahlen, die erhalten werden könnten, 222 oder 555 sind.",
+                  "var_with_rep_how_many": "Aus den 7 vorgegebenen Zahlen werden wir jeweils nur 3-stellige Zahlen bilden, daher werden wir mit einigen der vorgegebenen Elemente arbeiten."
+      },
+    
+      "footer": {
+                  "made": "Entwickelt von ",
+                  "and": "und",
+                  "rights": "@Combinados 2022. Alle Rechte vorbehalten."
+      },
+    
+      "options": {
+                  "one": "Kombination ",
+                  "two": "Permutation",
+                  "three": "Variation ",
+                  "four": "Methodenrechner"
+        },
+    
+      "calc": {
+                "totalNumber": "Gesamtzahl (n)",
+                "groupNumber": "Gruppennummer (r)",
+                "button": "BERECHNEN",
+                "result": "Ergebnis:",
+                "types": "Aus wie vielen verschiedenen Elementen müssen Sie wählen?",
+                "numberChosen": "Wie viele verschiedene Elemente haben Sie ausgewählt?",
+                "order": "Ist Ordnung wichtig?",
+                "rep": "Können sie wiederholt werden?"
+      },
+      "language": "Sprache",
+      "extras": {
+        "initial_page": "Rechner vorbereiten...",
+        "no": "Nein",
+        "yes": "Ja",
+        "fill": "Füllen Sie die Felder aus",
+        "coincidence": "Die eingegebenen Daten stimmen mit keiner Methode überein",
+        "without_rep": "Ohne Wiederholung",
+        "with_rep": "Mit Wiederholung"
+      }
 }
-

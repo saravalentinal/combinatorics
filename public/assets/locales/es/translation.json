@@ -10,30 +10,30 @@
     },
   
     "answers": {
-                "first": "Es una rama de las matemáticas que estudia los diferentes <strong> métodos </strong> para <strong> contar </strong> las distintas <strong> agrupaciones </strong> o formas de <strong> ordenar </strong> un determinado número de elementos.",
+                "first": "Es una rama de las matemáticas que estudia los diferentes métodos para contar las distintas agrupaciones o formas de <strong> ordenar </strong> un determinado número de elementos.",
                 "example_title": "Ejemplo:",
                 "example_explanation": "Supongamos que tenemos 3 objetos diferentes y queremos ordenarlos.",
                 "first_order": "Esta podría ser una forma de hacerlo:",
                 "second_order": "Pero si quisiéramos, podríamos ordenarlos de la siguiente manera:",
                 "third_order": "Y si los ordenara de todas las formas posibles, tendría algo como esto:",
-                "sum_up": "¿Cuántas formas de ordenar hubo? En este caso hubo <strong> 6 formas diferentes.</strong>",
-                "conclusion": "Esto es lo que se busca en los ejercicios de combinatoria, <strong>saber de cuántas maneras distintas se puede organizar cierto grupo de elementos.</strong>",
+                "sum_up": "¿Cuántas formas de ordenar hubo? En este caso hubo 6 formas diferentes.",
+                "conclusion": "Esto es lo que se busca en los ejercicios de combinatoria, saber de cuántas maneras <strong>distintas</strong> se puede organizar cierto grupo de elementos.",
                 "n_number": "<strong>Población (n) :</strong> es el número de elementos que se están estudiando.",
                 "r_number":  "<strong>Muestra (r) :</strong> de esos elementos de la población, cuantos elementos se seleccionan para ordenar.",
-                "second_example": "Siguiendo con nuestro ejemplo, en este caso la población (n) sería <strong>3</strong>, porque es el <strong>número total</strong> de objetos <strong>distintos</strong> del que disponemos. Por otro lado, el número de la muestra (r) <strong>también sería 3</strong>, ya que para formar las distintas combinaciones, estamos utilizando <strong>todos</strong> los objetos disponibles.",
-                "what_method": "<strong>¿Importa el orden de mis elementos? ¿Usaré todos los elementos?</strong> Hacerse estas preguntas es importante y nos ayudará a definir que método deberemos usar.",
+                "second_example": "Siguiendo con nuestro ejemplo, en este caso la población (n) sería 3, porque es el número total de objetos distintos del que disponemos. Por otro lado, el número de la muestra (r) también sería 3, ya que para formar las distintas combinaciones, estamos utilizando todos los objetos disponibles.",
+                "what_method": "¿Importa el orden de mis elementos? ¿Usaré todos los elementos? Hacerse estas preguntas es importante y nos ayudará a definir que método deberemos usar.",
                 "method_combination": "<strong>Combinación: </strong>no importa el orden de los elementos.",
                 "method_permutation": "<strong>Permutación: </strong>sí importa el orden y se trabaja con todos los elementos",
                 "method_variation": "<strong>Variación: </strong>sí importa el orden pero no se trabaja con todos los elementos.",
-                "use_permutation": "Para este caso usaremos la <strong>Permutación</strong>, ya que <strong>nos importa</strong> el orden y trabajamos con <strong>todos los elementos.</strong>",
+                "use_permutation": "Para este caso usaremos la Permutación, ya que nos importa el orden y trabajamos con todos los elementos.",
                 "order": "Para responder esta pregunta podemos ayudarnos de los siguientes pasos:",
                 "step_one": "<strong>1.</strong> Hacer 2 combinaciones diferentes con los mismos elementos.",
                 "step_two": "<strong>2.</strong> Preguntarse: ¿Son diferentes?",
                 "step_one_example": "1",
                 "step_two_example": "2",
                 "order_example": "Son diferentes porque lo que estamos evaluando es el orden de los objetos aunque sean siempre los mismos 3. Por lo tanto, sí importa el orden.",
-                "repetition_concept": "Los métodos con repetición de un conjunto son las distintas formas en que se puede hacer una selección de elementos de un conjunto dado, permitiendo que las <strong>selecciones</strong> puedan <strong>repetirse.</strong>",
-                "repetition_example": "Una vez que hemos decidido si usaremos combinación, permutación o variación, debemos preguntarnos si nuestros elementos pueden o no repetirse. En el caso de nuestros objetos, podríamos suponer que sólo disponemos de un sólo ejemplar de cada uno y nos es imposible aumentar su cantidad. Entonces <strong>no se pueden repetir</strong> nuestros elementos."
+                "repetition_concept": "Los métodos con repetición de un conjunto son las distintas formas en que se puede hacer una selección de elementos de un conjunto dado, permitiendo que las selecciones puedan <strong>repetirse.</strong>",
+                "repetition_example": "Una vez que hemos decidido si usaremos combinación, permutación o variación, debemos preguntarnos si nuestros elementos pueden o no repetirse. En el caso de nuestros objetos, podríamos suponer que sólo disponemos de un sólo ejemplar de cada uno y nos es imposible aumentar su cantidad. Entonces no se pueden repetir nuestros elementos."
     },
 
     "examples": {
@@ -96,6 +96,15 @@
               "order": "¿Importa el orden?",
               "rep": "¿Se puede repetir?"
     },
-    "language": "Idioma"
+    "language": "Idioma",
+    "extras": {
+              "loading_page": "Preparando calculadoras...",
+              "no": "No",
+              "yes": "Sí",
+              "fill": "Rellene los campos",
+              "coincidence": "Los datos ingresados no coinciden con ningún método",
+              "without_rep": "Sin repetición",
+              "with_rep": "Con repetición"
+    }
 }
 

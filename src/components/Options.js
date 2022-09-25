@@ -8,42 +8,23 @@ import { useLocation } from 'react-router-dom';
 export default function Options() {
 
   const location = useLocation();
-
-  console.log('holaaaaa' + location.pathname);
  
   const { t } = useTranslation();
-
-  const handleCombination = () => {
-
-  };
-
-  const handlePermutation = () => {
-
-  };
-
-  const handleVariation = () => {
-
-  };
-
-  const handleMethodCalculator = () => {
-
-  };
-
 
   return (
     <>
 
     <div className="options">
 
-      <div class="dropdown">
+      <div className="dropdown">
 
         <button type="button" data-bs-toggle="dropdown" aria-expanded="false" className={ClassNames('dropdown-toggle', {'true': location.pathname.match('combination(With|Without)Repetition')})}>
           {t('options.one')}
         </button>
 
         <ul className="dropdown-menu">
-          <li id="li-options"><NavLink to='/combinationWithoutRepetition' exact><span className="dropdown-item">Sin repetición</span></NavLink></li>
-          <li id="li-options"><NavLink to='/combinationWithRepetition' exact><span className="dropdown-item">Con repetición</span></NavLink></li>
+          <li id="li-options"><NavLink to='/combinationWithoutRepetition' exact><span className="dropdown-item">{t('extras.without_rep')}</span></NavLink></li>
+          <li id="li-options"><NavLink to='/combinationWithRepetition' exact><span className="dropdown-item">{t('extras.with_rep')}</span></NavLink></li>
         </ul>
 
       </div>
@@ -54,15 +35,15 @@ export default function Options() {
       </div>
 
 
-      <div class="dropdown">
+      <div className="dropdown">
 
         <button type="button" data-bs-toggle="dropdown" aria-expanded="false" className={ClassNames('dropdown-toggle', {'true': location.pathname.match('variation(With|Without)Repetition')})}>
           {t('options.three')}
         </button>
 
         <ul className="dropdown-menu">
-          <li id="li-options"><NavLink to='/variationWithoutRepetition' exact><span className="dropdown-item">Sin repetición</span></NavLink></li>
-          <li id="li-options"><NavLink to='/variationWithRepetition' exact><span className="dropdown-item">Con repetición</span></NavLink></li>
+          <li id="li-options"><NavLink to='/variationWithoutRepetition' exact><span className="dropdown-item">{t('extras.without_rep')}</span></NavLink></li>
+          <li id="li-options"><NavLink to='/variationWithRepetition' exact><span className="dropdown-item">{t('extras.with_rep')}</span></NavLink></li>
         </ul>
 
       </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
+import i18next from 'i18next'
 
 export default function MethodCalculator({children, onClick}) {
 
@@ -13,8 +14,8 @@ export default function MethodCalculator({children, onClick}) {
 
   const [result, setResult] = useState(['']);
 
-  const [order, setOrder] = useState(['No']);
-  const [rep, setRep] = useState(['No']);
+  const [order, setOrder] = useState([t('extras.no')]);
+  const [rep, setRep] = useState([t('extras.no')]);
 
   const [activeOrder, setActiveOrder] = useState(true);
   const [activeRep, setActiveRep] = useState(true);
@@ -51,11 +52,11 @@ export default function MethodCalculator({children, onClick}) {
       setActiveOrder(!activeOrder)
 
       if(activeOrder === true){
-          setOrder(['Si'])
+          setOrder([t('extras.yes')])
       }
   
       if(activeOrder === false){
-          setOrder(['No'])
+          setOrder([t('extras.no')])
       }
 
       setCoords({
@@ -76,11 +77,11 @@ export default function MethodCalculator({children, onClick}) {
       setActiveRep(!activeRep)
 
       if(activeRep === true){
-          setRep(['Si'])
+          setRep([t('extras.yes')])
       }
   
       if(activeRep === false){
-          setRep(['No'])
+          setRep([t('extras.no')])
       }
 
       setCoords2({
@@ -91,8 +92,6 @@ export default function MethodCalculator({children, onClick}) {
     onClick && onClick(e);
 
   };
-
-
 
   useEffect(() => {
 
@@ -121,7 +120,6 @@ export default function MethodCalculator({children, onClick}) {
     
     }, [activeRep]);
 
-
   const HandleChangeTotalNumber = e => {
 
     setTotalNumber(parseInt(e.target.value, 10));
@@ -134,11 +132,42 @@ export default function MethodCalculator({children, onClick}) {
 
   } 
 
+  i18next.on('languageChanged', function(lng) {
+    if(order=='No' || order == 'Nein'){
+      setOrder(t('extras.no'));
+    }else if(order=='Sí' || order == 'Yes' || order == 'Ja'){
+      setOrder(t('extras.yes'));
+    } 
+
+    if(rep=='No' || rep == 'Nein'){
+      setRep(t('extras.no'));
+    }else if(rep=='Sí' || rep == 'Yes' || rep == 'Ja'){
+      setRep(t('extras.yes'));
+    } 
+
+    if(result ==  "The data entered does not match any method" || result == "Die eingegebenen Daten stimmen mit keiner Methode überein" || result == "Los datos ingresados no coinciden con ningún método"){
+      setResult(t('extras.coincidence'))
+    } else if (result == "Fill in the blanks" || result == "Rellene los campos" || result == "Füllen Sie die Felder aus") {
+      setResult(t('extras.fill'))
+    } else if (result == "Kombination ohne Wiederholung" || result == "Combination without repetition" || result == "Combinación sin repetición"){
+      setResult(t('examples.comb_without_rep_title'))
+    } else if (result == "Combinación con repetición" || result == "Combination with repetition" || result == "Kombination mit Wiederholung"){
+      setResult(t('examples.comb_with_rep_title'))
+    } else if (result == "Permutation" || result == "Permutación"){
+      setResult(t('examples.permutation_title'))
+    } else if (result == "Variación sin repetición" || result == "Variation without repetition" || result == "Variation ohne Wiederholung"){
+      setResult(t('examples.var_without_rep_title'))
+    } else if(result == "Variation mit Wiederholung" || result == "Variation with repetition" || result == "Variación con repetición"){
+      setResult(t('examples.var_with_rep_title'))
+    }
+
+  })
+
 
   const mainCalculator = () =>{
 
-    const toggleOrder = order;
-    const toggleRep = rep;
+    let toggleOrder = order;
+    let toggleRep = rep;
 
     console.log('el numero total es ' + totalNumber)
     console.log('el numero del grupo es ' + groupNumber)
@@ -147,38 +176,42 @@ export default function MethodCalculator({children, onClick}) {
 
     function methodCalculator(){
 
+      toggleOrder == t('extras.no') ? toggleOrder = 'No' : toggleOrder = 'Si';
+      toggleRep ==  t('extras.no') ? toggleRep = 'No' : toggleRep = 'Si';
+
+
         if(toggleOrder == 'No' && toggleRep == 'No' && (totalNumber > groupNumber)){
-            const result = "Combinación sin repetición";
+            const result = t('examples.comb_without_rep_title');
             return result;
         } 
 
         else if (toggleOrder == 'No' && toggleRep == 'Si' && (totalNumber > groupNumber)){
-            const result = "Combinación con repetición";
+            const result = t('examples.comb_with_rep_title');
             return result;
         }
 
         else if(toggleOrder == 'Si' && toggleRep == 'No' && (totalNumber === groupNumber)){
-            const result = "Permutación";
+            const result = t('examples.permutation_title');
             return result;
         }
 
         else if(toggleOrder == 'Si' && toggleRep == 'No' && (totalNumber > groupNumber)){
-            const result = "Variación sin repetición";
+            const result = t('examples.var_without_rep_title');
             return result;
         }
 
         else if(toggleOrder == 'Si' && toggleRep == 'Si' && (totalNumber > groupNumber)){
-            const result = "Variación con repetición";
+            const result = t('examples.var_with_rep_title');
             return result;
         }
 
         else if(toggleOrder == 'No' && toggleRep == 'No' && totalNumber === 0 && groupNumber === 0){
-          const result = "Rellene los campos"
+          const result = t('extras.fill');
           return result;
         }
 
         else{
-            const result = "Los datos ingresados no coinciden con ningún método";
+            const result = t('extras.coincidence');
             return result;
         }
     }
@@ -226,7 +259,6 @@ export default function MethodCalculator({children, onClick}) {
 
           <div className='toggle-div'>
             <h2>{t('calc.rep')}</h2>
-            {/* <button type='button' onClick={handleToggleRep} id={rep}>{rep}</button> */}
 
             <button onClick={handleToggleRep} className='ripple-btn' type='button' id={rep}>
               {rep}
@@ -250,7 +282,7 @@ export default function MethodCalculator({children, onClick}) {
     </div>
   
     <div className='div-result-method'>
-          <h2>{result}</h2>
+          <h2 className='result-h2'>{result}</h2>
     </div>
         
     </>

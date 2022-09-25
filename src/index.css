@@ -30,7 +30,7 @@
 }
 
 #dark .background-questions{
-    background-color: #575757;
+    background-color: #293549;
 }
 
 #dark .logo{
@@ -72,7 +72,7 @@
     background-color: #80808060;
 }
 
-#dark .settings button{
+#dark .setting-button{
     color: #b6b6b6;
 }
 
@@ -84,29 +84,35 @@
     background-color: #b6b6b6;
 }
 
-#dark .method-div button{
+#dark .method-div button {
     border: solid 1px #b6b6b6;
     background-color: transparent;
     border-radius: 5px;
     color: #b6b6b6;
 }
 
+#dark .true{
+    border: solid 1px #82B1FF !important;
+    color: #82B1FF !important;
+    background-color: transparent !important;
+}
+
 #dark .toggle-div button{
     color: #eceff1;
     font-weight: 500;
-} 
+}
 
-#dark #Si{
+#dark #Sí, #dark #Ja, #dark #Yes{
     background-color: #00C853;
     color: #1e1e1e;
 }
 
-#dark #No{
+#dark #No, #dark #Nein{
     background-color: #82B1FF;
     color:#1e1e1e;
 }
 
-#Si, #No{
+#Sí, #No, #Ja, #Yes, #Nein{
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -114,7 +120,7 @@
     border-top: solid 1px #808080;
 }
 
-#dark .div-result-method h2{
+#dark .div-result-method h2, #dark .div-result-method h3{
     color: #eceff1;
 }
 
@@ -122,17 +128,11 @@
     color:#82B1FF;
 }
 
-#dark .method-main div input:focus{
-    border: none;
-    outline: none;
-    background-color: #eceff1;
-}
-
 #dark .method-main div input{
     transition: background-color 0.2s ease-in-out;
 }
 
-#dark .numbersPermutation div input:focus{
+#dark .numbersPermutation div input:focus, #dark .method-main div input:focus, #dark .numbers div input:focus{
     border: none;
     outline: none;
     background-color: #eceff1;
@@ -142,9 +142,14 @@
     transition: background-color 0.2s ease-in-out;
 }
 
-#dark .title-questions, #dark .question, #dark .answer, #dark .answer_explanation{
-    color:#eceff1;
+#dark .title-questions, #dark .question, #dark .example_subtitle{
+    color: #eceff1;
 }
+
+#dark .answer, #dark .answer_explanation, #dark .answer_example{
+    color: #eceff1db;
+}
+
 
 #dark .answer_explanation::before{
     border-top: solid 1px #b6b6b6;
@@ -170,6 +175,25 @@
     color: white;
 }
 
+#dark .accordion-button{
+    background-color: #293549;
+}
+
+#dark .example_title{
+    color: #eceff1;
+}
+
+#dark .accordion-body{
+    background-color: #293549;
+}
+
+#dark .eraser-button{
+    color:rgb(33, 33, 33);
+}
+
+#dark .eraser-button-result{
+    color:rgb(255, 255, 255);
+}
 
 /* NAVBAR */
 .settings{
@@ -188,7 +212,7 @@
 }
 
 .main-div{
-    width: 95%;
+    width: 90%;
     max-width: 650px;
     margin: 0 auto;   
 }
@@ -312,7 +336,7 @@
 }
 
 .numbers div:last-child{
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .numbers div input, .numbersPermutation div input{
@@ -416,12 +440,13 @@
     padding: 0;
 }
 
-#Si{
+#Sí, #Ja, #Yes{
     background-color:#00C853;
     transition: background-color 0.2s ease-in-out;
 }
 
-#No{
+
+#No, #Nein{
     background-color: #1e1e1e;
     transition: background-color 0.2s ease-in-out;
     color: white;
@@ -464,11 +489,25 @@
     text-align: center;
     font-size: 17px;
     font-weight: 500;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: hsl(202, 84%, 10%);
+}
 
+.result-h2{
+    padding-top:20px !important;
+}
+
+.div-result-method h3{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    padding:0 0 50px 0;
+    word-wrap: break-word;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(202, 84%, 10%);
 }
 
 .title-method{
@@ -495,6 +534,33 @@
     transform: translate(-50%, -50%);
     animation: ripple-effect 1s ease 1 forwards;
 }
+
+.div-eraser-button{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content:flex-end;
+}
+
+.eraser-button{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    bottom: 33px;
+    right: 8px;
+    color:rgb(106, 106, 106);
+}
+
+.eraser-button-result{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    top: 20px;
+    right: 0px;
+    color:rgb(106, 106, 106);
+}
+
+
 
 @keyframes ripple-effect {
     0% {
@@ -529,7 +595,7 @@
 
 .questions-section{
     font-family: 'Montserrat', sans-serif;
-    width: 95%;
+    width: 90%;
     max-width: 650px;
     margin: 0 auto;
 }
@@ -810,6 +876,12 @@
     border-radius: 4px;
     animation: jump7456 0.5s linear infinite;
 }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
     
     @keyframes jump7456 {
       15% {

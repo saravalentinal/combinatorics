@@ -31,8 +31,6 @@ export default function Questions(props) {
 
       <IsOrderImportant
                 question = {t('questions.forth')}
-/*                 step_one = {t('answers.step_one')}
-                step_two = {t('answers.step_two')} */
                 step_one_example = {t('answers.step_one_example')}
                 step_two_example = {t('answers.step_two_example')}
                 order_example = {t('answers.order_example')}
