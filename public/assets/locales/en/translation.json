@@ -9,30 +9,30 @@
                 },
 
                 "answers": {
-                  "first": "It's a branch of mathematics, which studies the different<strong> methods </strong> to <strong> count </strong> groupings or ways of <strong> order </strong> a determined number of elements.",
+                  "first": "It's a branch of mathematics, which studies the different methods to count groupings or ways of <strong> order </strong> a determined number of elements.",
                   "example_title": "Example:",
                   "example_explanation": "Let's suppose we have three different objects and we want to order them.",
                   "first_order": "This could be a way of doing it:",
                   "second_order": "But if we wanted to, we could also order them in the following way:",
                   "third_order": "And if we ordered them in every way possible, we would have something like this:",
-                  "sum_up": "How many ways to order were there? In this case were <strong> 6 different possibilities.</strong>",
-                  "conclusion": "This is what we look for in combinatorics exercises, <strong>to know in how many distinct ways we can arrange a certain group of elements.</strong>",
+                  "sum_up": "How many ways to order were there? In this case were 6 different possibilities.",
+                  "conclusion": "This is what we look for in combinatorics exercises, to know in how many <strong>distinct</strong> ways we can arrange a certain group of elements.",
                   "n_number": "<strong>Population (n) :</strong> it's the total number of elements that are been studied.",
                   "r_number":  "<strong>Sample (r) :</strong> the amount of elements that are selected from the population to be ordered.",
-                  "second_example": "Following our example, in this case population (n) would be <strong>3</strong>, because it is the <strong>total number</strong> of <strong>different</strong> objects which we dispose. On the other hand, the sample number (r) <strong>would also be 3</strong>, because in order to form distinct combinations, we are using <strong>all</strong> of our available objects.",
-                  "what_method": "<strong>Is the order of my elements important? Will I use all of my elements?</strong> Asking ourselves these questions is important and it will help us define which method we should use.",
+                  "second_example": "Following our example, in this case the population (n) would be 3, because it is the total number of different objects which we dispose. On the other hand, the sample number (r) would also be 3, because in order to form distinct combinations, we are using all of our available objects.",
+                  "what_method": "Is the order of my elements important? Will I use all of my elements? Asking ourselves these questions is important and it will help us define which method we should use.",
                   "method_combination": "<strong>Combination: </strong>the order of the elements it's not important.",
                   "method_permutation": "<strong>Permutation: </strong>order is important and we work with every element.",
                   "method_variation": "<strong>Variation: </strong>order is impotant but we don't work with all of our elements.",
-                  "use_permutation": "For this case we are going to choose <strong>Permutation</strong>, since <strong>we care</strong> about order and we are working with <strong>every element.</strong>",
+                  "use_permutation": "For this case we are going to choose Permutation, since we care about order and we are working with every element.",
                   "order": "To answer this questions we can help us following the next steps:",
                   "step_one": "<strong>1.</strong> Make 2 different combinations with the same elements.",
                   "step_two": "<strong>2.</strong> Ask yourself: Are they the same?",
                   "step_one_example": "1",
                   "step_two_example": "2",
                   "order_example": "They are different because what we are evaluating is the order of the objects, although they are always the same ones. Therefore, order is important.",
-                  "repetition_concept": "Methods with repetition in a set are the differents forms in which we can arrange a selection of elements of a given group, allowing <strong>selections</strong> to be <strong>repeated.</strong>",
-                  "repetition_example": "Once we have already decided whether we are going to use combination, permutation or variation, we must ask ourselves if our elements can or not, be repeated. In our previous example, we could suppose that we only have one copy of each one and it is impossible for us to increment its quantity. Therefore, our elements <strong>can not be repeated</strong>."
+                  "repetition_concept": "Methods with repetition in a set are the differents forms in which we can arrange a selection of elements of a given group, allowing selections to be repeated.",
+                  "repetition_example": "Once we have already decided whether we are going to use combination, permutation or variation, we must ask ourselves if our elements can or not, be repeated. In our previous example, we could suppose that we only have one copy of each one and it is impossible for us to increment its quantity. Therefore, our elements can not be repeated."
       },
   
       "examples": {

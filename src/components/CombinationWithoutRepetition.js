@@ -42,6 +42,17 @@ export default function CombinationWithoutRepetition() {
     e.target.total2.value = '';
   }
 
+  const eraseHandler = () =>{
+    document.getElementById('input-value').value = null;
+  }
+
+  const eraseHandlerSecond = () =>{
+    document.getElementById('input-value-second').value = null;
+  }
+
+  const eraseHandlerResult = () =>{
+    document.getElementById('result').innerHTML = "";
+  }
 
   return (
     <>
@@ -55,12 +66,20 @@ export default function CombinationWithoutRepetition() {
   
           <div>
             <h2>{t('calc.totalNumber')}</h2>
-            <input type='number' name='total' min={1} max={9999}></input>
+            <input type='number' name='total' min={1} max={9999} id="input-value"></input>
+
+            <div className='div-eraser-button'>
+              <button type='button' onClick={eraseHandler} className="eraser-button">x</button>
+            </div>
           </div>
   
           <div>
             <h2>{t('calc.groupNumber')}</h2>
-            <input type='number' name='total2' min={1} max={9999}></input>
+            <input type='number' name='total2' min={1} max={9999} id="input-value-second"></input>
+
+            <div className='div-eraser-button'>
+              <button type='button' onClick={eraseHandlerSecond} className="eraser-button">x</button>
+            </div>
           </div>
   
         </div>
@@ -71,8 +90,11 @@ export default function CombinationWithoutRepetition() {
     </div>
   
     <div className='div-result-method'>
+          <div className='div-eraser-button'>
+              <button type='button' onClick={eraseHandlerResult} className="eraser-button-result">x</button>
+          </div>
           <h2>{t('calc.result')}</h2>
-          <h3>{result}</h3>
+          <h3 id="result">{result}</h3>
     </div>
     
     </>

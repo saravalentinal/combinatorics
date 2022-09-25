@@ -187,6 +187,14 @@
     background-color: #293549;
 }
 
+#dark .eraser-button{
+    color:rgb(33, 33, 33);
+}
+
+#dark .eraser-button-result{
+    color:rgb(255, 255, 255);
+}
+
 /* NAVBAR */
 .settings{
     display: flex;
@@ -328,7 +336,7 @@
 }
 
 .numbers div:last-child{
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .numbers div input, .numbersPermutation div input{
@@ -481,11 +489,14 @@
     text-align: center;
     font-size: 17px;
     font-weight: 500;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: hsl(202, 84%, 10%);
+}
 
+.result-h2{
+    padding-top:20px !important;
 }
 
 .div-result-method h3{
@@ -523,6 +534,33 @@
     transform: translate(-50%, -50%);
     animation: ripple-effect 1s ease 1 forwards;
 }
+
+.div-eraser-button{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content:flex-end;
+}
+
+.eraser-button{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    bottom: 33px;
+    right: 8px;
+    color:rgb(106, 106, 106);
+}
+
+.eraser-button-result{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    top: 20px;
+    right: 0px;
+    color:rgb(106, 106, 106);
+}
+
+
 
 @keyframes ripple-effect {
     0% {

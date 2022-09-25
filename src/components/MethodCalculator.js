@@ -145,6 +145,22 @@ export default function MethodCalculator({children, onClick}) {
       setRep(t('extras.yes'));
     } 
 
+    if(result ==  "The data entered does not match any method" || result == "Die eingegebenen Daten stimmen mit keiner Methode überein" || result == "Los datos ingresados no coinciden con ningún método"){
+      setResult(t('extras.coincidence'))
+    } else if (result == "Fill in the blanks" || result == "Rellene los campos" || result == "Füllen Sie die Felder aus") {
+      setResult(t('extras.fill'))
+    } else if (result == "Kombination ohne Wiederholung" || result == "Combination without repetition" || result == "Combinación sin repetición"){
+      setResult(t('examples.comb_without_rep_title'))
+    } else if (result == "Combinación con repetición" || result == "Combination with repetition" || result == "Kombination mit Wiederholung"){
+      setResult(t('examples.comb_with_rep_title'))
+    } else if (result == "Permutation" || result == "Permutación"){
+      setResult(t('examples.permutation_title'))
+    } else if (result == "Variación sin repetición" || result == "Variation without repetition" || result == "Variation ohne Wiederholung"){
+      setResult(t('examples.var_without_rep_title'))
+    } else if(result == "Variation mit Wiederholung" || result == "Variation with repetition" || result == "Variación con repetición"){
+      setResult(t('examples.var_with_rep_title'))
+    }
+
   })
 
 
@@ -243,7 +259,6 @@ export default function MethodCalculator({children, onClick}) {
 
           <div className='toggle-div'>
             <h2>{t('calc.rep')}</h2>
-            {/* <button type='button' onClick={handleToggleRep} id={rep}>{rep}</button> */}
 
             <button onClick={handleToggleRep} className='ripple-btn' type='button' id={rep}>
               {rep}
@@ -267,7 +282,7 @@ export default function MethodCalculator({children, onClick}) {
     </div>
   
     <div className='div-result-method'>
-          <h2>{result}</h2>
+          <h2 className='result-h2'>{result}</h2>
     </div>
         
     </>
