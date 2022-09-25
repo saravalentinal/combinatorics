@@ -98,7 +98,13 @@
     },
     "language": "Idioma",
     "extras": {
-              "loading_page": "Preparando calculadoras..."
+              "loading_page": "Preparando calculadoras...",
+              "no": "No",
+              "yes": "Sí",
+              "fill": "Rellene los campos",
+              "coincidence": "Los datos ingresados no coinciden con ningún método",
+              "without_rep": "Sin repetición",
+              "with_rep": "Con repetición"
     }
 }
 

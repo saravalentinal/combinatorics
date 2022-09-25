@@ -5,30 +5,34 @@ import CalculateButton from './CalculateButton';
 
 export default function CombinationWithRepetition() {
 
+  /* global BigInt */
+
   const { t } = useTranslation();
 
   const [result, setResult] = useState(['']);
 
+  let totalNumber = BigInt(0);
+  let groupNumber = BigInt(0);
+
   const submitHandler = e =>{
     e.preventDefault();
-    const totalNumber = parseInt(e.target.total.value,10);
-    const groupNumber = parseInt(e.target.total2.value, 10);
+    totalNumber = parseInt(e.target.total.value,10);
+    groupNumber = parseInt(e.target.total2.value, 10);
     
-    function recursiveFactorial(numberToFactorial){
-      if (numberToFactorial === 0)
-      {
-        return 1;
+    function factorial (numberToFactorial) {
+      let total = BigInt(1); 
+      for (let i=BigInt(1); i<=numberToFactorial; i++) {
+        total = total * i; 
       }
-
-      return numberToFactorial * recursiveFactorial(numberToFactorial-1)
+      return total; 
     }
 
     function combinationWithRepetitionFormula(){
       if(isNaN(totalNumber) || isNaN(groupNumber)){
         return '';
       }else{
-        const result = recursiveFactorial(totalNumber + (groupNumber - 1)) / (recursiveFactorial(totalNumber - 1) * recursiveFactorial(groupNumber));
-        return result;
+        const result = BigInt(factorial(totalNumber + (groupNumber - 1)) / (factorial(totalNumber - 1) * factorial(groupNumber)));
+        return result.toString();
       }
     }
 
@@ -51,12 +55,12 @@ export default function CombinationWithRepetition() {
   
           <div>
             <h2>{t('calc.totalNumber')}</h2>
-            <input type='number' name='total'></input>
+            <input type='number' name='total' min={1} max={9999}></input>
           </div>
   
           <div>
             <h2>{t('calc.groupNumber')}</h2>
-            <input type='number' name='total2'></input>
+            <input type='number' name='total2' min={1} max={9999}></input>
           </div>
   
         </div>
@@ -67,7 +71,8 @@ export default function CombinationWithRepetition() {
     </div>
   
     <div className='div-result-method'>
-          <h2>{t('calc.result')} {result} </h2>
+          <h2>{t('calc.result')}</h2>
+          <h3>{result}</h3>
     </div>
     
     </>

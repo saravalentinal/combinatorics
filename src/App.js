@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import i18next from 'i18next'
 import cookies from 'js-cookie'
-
+import ClassNames from 'classnames';
 
 const languages = [
   {
@@ -62,10 +62,10 @@ function App() {
       </Link>
 
         <div className='settings'>
-        <button><i onClick={toggleTheme} className="fa-solid fa-circle-half-stroke"></i></button>
+        <button className='setting-button'><i onClick={toggleTheme} className="fa-solid fa-circle-half-stroke"></i></button>
 
         <div className="dropdown">
-          <button className="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button className={ClassNames('dropdown-toggle', 'setting-button')} type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i className="fa-solid fa-globe"></i>
           </button>
 

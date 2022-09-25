@@ -6,20 +6,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import './i18n';
 
-
 let language = navigator.language || navigator.userLanguage;
 
 let loadingText = '';
 
-if(language === "de-DE"){
-  loadingText = 'Rechner vorbereiten...'
-} else if(language === 'en-US'){
-  loadingText= 'Preparing calculators...'
-} else if(language === 'es'){
-  loadingText = 'Preparando calculadoras...'
-} else{
-  loadingText = 'Preparing calculators...'
-}
+switch(language) {
+  case 'de':
+  case 'de-DE':
+  case 'de-AT':
+  case 'de-CH':
+  case 'de-LI':
+     loadingText = 'Rechner vorbereiten...'
+     break;
+  case 'es-AR':
+  case 'es':
+     loadingText = 'Preparando calculadoras...'
+     break;
+  default:
+     loadingText = 'Preparing calculators...'
+     break;
+  }
 
  const loadingMarkUp = 
 

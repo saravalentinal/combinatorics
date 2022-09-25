@@ -6,29 +6,32 @@ import CalculateButton from './CalculateButton';
 export default function Permutation() 
 {
 
+  /* global BigInt */
+
   const { t } = useTranslation();
 
   const [result, setResult] = useState(['']);
 
+  let totalNumber = BigInt(0);
+
   const submitHandler = e =>{
     e.preventDefault();
-    const totalNumber = parseInt(e.target.total.value,10);
+    totalNumber = parseInt(e.target.total.value,10);
     
-    function recursiveFactorial(numberToFactorial){
-      if (numberToFactorial === 0)
-      {
-        return 1;
+    function factorial (numberToFactorial) {
+      let total = BigInt(1); 
+      for (let i=BigInt(1); i<=numberToFactorial; i++) {
+        total = total * i; 
       }
-
-      return numberToFactorial * recursiveFactorial(numberToFactorial-1)
+      return total; 
     }
 
     function permutationFormula(){
       if(isNaN(totalNumber)){
         return '';
       }else{
-        const result = recursiveFactorial(totalNumber);
-        return result;
+        const result = BigInt(factorial(totalNumber));
+        return result.toString();
       }
     }
 
@@ -46,7 +49,7 @@ export default function Permutation()
   
           <div>
             <h2>{t('calc.totalNumber')}</h2>
-            <input type='number' name='total'></input>
+            <input type='number' name='total' min={1} max={9999}></input>
           </div>
   
         </div>
@@ -57,7 +60,8 @@ export default function Permutation()
     </div>
   
     <div className='div-result-method'>
-          <h2>{t('calc.result')} {result} </h2>
+          <h2>{t('calc.result')}</h2>
+          <h3>{result}</h3>
     </div>
     
     </>

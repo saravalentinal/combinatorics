@@ -97,6 +97,12 @@
       },
       "language": "Language",
       "extras": {
-        "initial_page": "Preparing calculators..."
+        "initial_page": "Preparing calculators...",
+        "no": "No",
+        "yes": "Yes",
+        "fill": "Fill in the blanks",
+        "coincidence": "The data entered does not match any method",
+        "without_rep": "Without repetition",
+        "with_rep": "With repetition"
 }
 }
