@@ -37,9 +37,6 @@ export default function CombinationWithoutRepetition() {
     }
 
     setResult(combinationFormula());
-
-    e.target.total.value = '';
-    e.target.total2.value = '';
   }
 
   const eraseHandler = () =>{
