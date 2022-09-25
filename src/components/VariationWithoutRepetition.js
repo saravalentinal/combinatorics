@@ -39,8 +39,6 @@ export default function VariationWithoutRepetition() {
 
     setResult(variationWithoutRepetitionFormula());
 
-    e.target.total.value = '';
-    e.target.total2.value = '';
   }
 
   const eraseHandler = () =>{

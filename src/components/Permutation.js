@@ -37,7 +37,6 @@ export default function Permutation()
 
     setResult(permutationFormula());
 
-    e.target.total.value = '';
   }
 
   const eraseHandler = () =>{

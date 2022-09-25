@@ -38,8 +38,6 @@ export default function CombinationWithRepetition() {
 
     setResult(combinationWithRepetitionFormula());
 
-    e.target.total.value = '';
-    e.target.total2.value = '';
   }
 
   const eraseHandler = () =>{
